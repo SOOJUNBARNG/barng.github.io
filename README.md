@@ -1,4 +1,4 @@
-# Nyan.github.io
+# soojun_barng.github.io
 Job hunting purpose 
 
 # Mac
