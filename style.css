@@ -50,10 +50,10 @@
   border: 8px solid darkmagenta;
 }
 
-section {
+/* section {
   height: 100vh;
   background: url("./bg.jpg");
   background-size: cover;
   background-position: center;
   transition: all 0.5s;
-}
+} */
