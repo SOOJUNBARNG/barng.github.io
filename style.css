@@ -1,20 +1,25 @@
+/* https://www.colordic.org/ */
+
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  border: 3px solid #dc143c; /* Adds a black border around the body */
+  border-bottom: none; /* Removes the bottom border */
+  margin: 10px; /* Adds some space between the body and the browser edge */
+}
+
+/* App Layout */
 .app {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.header {
-  height: 48px;
-  background-color: lightcyan;
-  box-sizing: border-box;
-  border: 8px solid blue;
 }
 
 .main {
@@ -36,6 +41,45 @@
   flex-grow: 1;
 }
 
+/* Header Styles */
+.header {
+  height: 48px;
+  background-color: lightcyan;
+  box-sizing: border-box;
+  border: 8px solid blue;
+}
+
+#header-placeholder {
+  background-color: #dc143c;
+  color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between; /* Distribute space between header text and image */
+  align-items: center; /* Vertically align the content */
+  height: 80px; /* Adjust height to your needs */
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Pushes content apart */
+  align-items: center; /* Vertically center the header content */
+  width: 100%;
+}
+h1 {
+  color: white;
+  text-align: center;
+  margin: 10px 0; /* Adds spacing above and below */
+}
+
+h2 {
+  color: black;
+  text-align: left;
+  padding: 10; /* Adds more space around the text */
+  margin: 10px 0; /* Adds spacing above and below */
+}
+
+/* Content Styles */
 .flex-content {
   flex-grow: 1;
   background-color: palegoldenrod;
@@ -50,6 +94,7 @@
   border: 8px solid darkmagenta;
 }
 
+/* Navigation Styles */
 nav ul {
   list-style-type: none; /* Remove default list styling */
   padding: 0;
@@ -73,16 +118,10 @@ nav ul li a:hover {
   color: #007bff; /* Change color on hover */
 }
 
-body {
-  font-family: Arial, sans-serif;
-}
-
-#header-placeholder {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border: 1px solid #ccc;
-}
-
-h1 {
-  color: #333;
+.profile-pic {
+  width: 100px; /* Adjust size */
+  height: 100px;
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover; /* Ensures proper cropping */
+  border: 2px solid white; /* Optional border */
 }
