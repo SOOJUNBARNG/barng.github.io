@@ -125,3 +125,11 @@ nav ul li a:hover {
   object-fit: cover; /* Ensures proper cropping */
   border: 2px solid white; /* Optional border */
 }
+
+/* Language shift Styles */
+#language-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+}
