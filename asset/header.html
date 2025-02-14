@@ -1,19 +1,74 @@
 <div id="header-placeholder">
-    <!-- Manually insert the header content here -->
-    <header>
-      <h1>【Github公開】履歴書及び職務経歴書</h1>
-      <nav>
-          <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="../pages/education.html">Education</a></li>
-                <li><a href="../pages/skill.html">Skills</a></li>
-                <li><a href="../pages/experience.html">Experiences</a></li>
-                <li><a href="../pages/projects.html">Projects</a></li>
-                <li><a href="../pages/references.html">References</a></li>
-                <li><a href="../pages/sub_job.html">Others</a></li>
-          </ul>
-      </nav>
-      <img src="./asset/self_picture.png" alt="Profile Picture" class="profile-pic">
-    </header>
-  </div>
+  <!-- Manually insert the header content here -->
+  <header>
+    <div id="language-switcher">
+      <select onchange="changeLanguage(this.value)" style="padding: 10px; font-size: 16px;">
+          <option value="en">English</option>
+          <option value="jp">日本語</option>
+          <option value="kr">한국어</option>
+      </select>
+    </div>
+    <h1 id="resume-title">履歴書&職務経歴書</h1>
+    <nav>
+        <ul>
+              <li><a href="index.html" id="home-link">Home</a></li>
+              <li><a href="../pages/education.html" id="education-link">Education</a></li>
+              <li><a href="../pages/skill.html" id="skills-link">Skills</a></li>
+              <li><a href="../pages/experience.html" id="experience-link">Experiences</a></li>
+              <li><a href="../pages/projects.html" id="projects-link">Projects</a></li>
+              <li><a href="../pages/references.html" id="references-link">References</a></li>
+              <li><a href="../pages/sub_job.html" id="others-link">Others</a></li>
+        </ul>
+    </nav>
+    <img src="./asset/self_picture.png" alt="Profile Picture" class="profile-pic">
+  </header>
+</div>
   
+<script>
+  // Language Data
+  const languageData = {
+      en: {
+          resumeTitle: "Resume & Career",
+          home: "Home",
+          education: "Education",
+          skills: "Skills",
+          experience: "Experiences",
+          projects: "Projects",
+          references: "References",
+          others: "Others"
+      },
+      jp: {
+          resumeTitle: "履歴書及び職務経歴書",
+          home: "ホーム",
+          education: "教育",
+          skills: "スキル",
+          experience: "経験",
+          projects: "プロジェクト",
+          references: "参考文献",
+          others: "その他"
+      },
+      kr: {
+          resumeTitle: "이력서 및 직무 경력서",
+          home: "홈",
+          education: "교육",
+          skills: "기술",
+          experience: "경험",
+          projects: "프로젝트",
+          references: "참고문헌",
+          others: "기타"
+      }
+  };
+
+  // Function to Change Language
+  function changeLanguage(lang) {
+      document.getElementById('resume-title').textContent = languageData[lang].resumeTitle;
+      document.getElementById('home-link').textContent = languageData[lang].home;
+      document.getElementById('education-link').textContent = languageData[lang].education;
+      document.getElementById('skills-link').textContent = languageData[lang].skills;
+      document.getElementById('experience-link').textContent = languageData[lang].experience;
+      document.getElementById('projects-link').textContent = languageData[lang].projects;
+      document.getElementById('references-link').textContent = languageData[lang].references;
+      document.getElementById('others-link').textContent = languageData[lang].others;
+  }
+</script>
+

@@ -11,7 +11,21 @@ body {
   padding: 20px;
   border: 3px solid #dc143c; /* Adds a black border around the body */
   border-bottom: none; /* Removes the bottom border */
+  border-top: none; /* Removes the bottom border */
   margin: 10px; /* Adds some space between the body and the browser edge */
+}
+
+footer {
+  font-family: Arial, sans-serif;
+  border: 3px solid #dc143c; /* Adds a black border around the body */
+  border-bottom: none; /* Removes the bottom border */
+  border-top: none; /* Removes the bottom border */
+  margin: 10px; /* Adds some space between the body and the browser edge */
+}
+
+li {
+  line-height: 1.2; /* Adjusts the line spacing between list items */
+  margin: 20px; /* Adds some space between the body and the browser edge */
 }
 
 /* App Layout */
