@@ -8,7 +8,7 @@
           <option value="kr">한국어</option>
       </select>
     </div>
-    <h1 id="resume-title">履歴書&職務経歴書</h1>
+    <h1 id="resume-title">Resume</h1>
     <nav>
         <ul>
               <li><a href="/barng.github.io/index.html" id="home-link">Home</a></li>
@@ -40,9 +40,9 @@
       jp: {
           resumeTitle: "履歴書及び職務経歴書",
           home: "ホーム",
-          education: "教育",
+          education: "学歴",
           skills: "スキル",
-          experience: "経験",
+          experience: "職歴",
           projects: "プロジェクト",
           references: "参考文献",
           others: "その他"
@@ -50,25 +50,27 @@
       kr: {
           resumeTitle: "이력서 및 직무 경력서",
           home: "홈",
-          education: "교육",
-          skills: "기술",
-          experience: "경험",
+          education: "학력",
+          skills: "스킬",
+          experience: "직무경험",
           projects: "프로젝트",
-          references: "참고문헌",
+          references: "기타활동",
           others: "기타"
       }
   };
 
-  // Function to Change Language
-  function changeLanguage(lang) {
-      document.getElementById('resume-title').textContent = languageData[lang].resumeTitle;
-      document.getElementById('home-link').textContent = languageData[lang].home;
-      document.getElementById('education-link').textContent = languageData[lang].education;
-      document.getElementById('skills-link').textContent = languageData[lang].skills;
-      document.getElementById('experience-link').textContent = languageData[lang].experience;
-      document.getElementById('projects-link').textContent = languageData[lang].projects;
-      document.getElementById('references-link').textContent = languageData[lang].references;
-      document.getElementById('others-link').textContent = languageData[lang].others;
-  }
+  window.onload = function () {
+      document.querySelector("select").addEventListener("change", function () {
+          const lang = this.value;
+          document.getElementById('resume-title').textContent = languageData[lang].resumeTitle;
+          document.getElementById('home-link').textContent = languageData[lang].home;
+          document.getElementById('education-link').textContent = languageData[lang].education;
+          document.getElementById('skills-link').textContent = languageData[lang].skills;
+          document.getElementById('experience-link').textContent = languageData[lang].experience;
+          document.getElementById('projects-link').textContent = languageData[lang].projects;
+          document.getElementById('references-link').textContent = languageData[lang].references;
+          document.getElementById('others-link').textContent = languageData[lang].others;
+      });
+  };
 </script>
 
