@@ -93,6 +93,13 @@ h2 {
   margin: 10px 0; /* Adds spacing above and below */
 }
 
+h3 {
+  color: black;
+  text-align: left;
+  padding: 10; /* Adds more space around the text */
+  margin: 10px 0; /* Adds spacing above and below */
+}
+
 /* Content Styles */
 .flex-content {
   flex-grow: 1;
