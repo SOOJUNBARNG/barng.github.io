@@ -1,17 +1,21 @@
 // 折りたたみ可能状態
-document.addEventListener("DOMContentLoaded", function() {
-  const headers = document.querySelectorAll('.foldable-header');
+document.addEventListener("DOMContentLoaded", () => {
+    const headers = document.querySelectorAll(".foldable-header");
+    headers.forEach(header => {
+        header.style.cursor = "pointer";
+        header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+        if (content && content.classList.contains("foldable-content")) {
+            content.style.display = content.style.display === "none" ? "block" : "none";
+        }
+        });
 
-  headers.forEach(header => {
-    header.addEventListener('click', function() {
-      const content = header.nextElementSibling;
-      if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-      } else {
+        // Optionally hide all content by default
+        const content = header.nextElementSibling;
+        if (content && content.classList.contains("foldable-content")) {
         content.style.display = "none";
-      }
+        }
     });
-  });
 });
 
 // Load header dynamically
