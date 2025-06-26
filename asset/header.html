@@ -1,5 +1,4 @@
 <div id="header-placeholder">
-  <!-- Manually insert the header content here -->
   <header>
     <div id="language-switcher">
       <select onchange="changeLanguage(this.value)" style="padding: 10px; font-size: 16px;">
@@ -59,18 +58,29 @@
       }
   };
 
-  window.onload = function () {
-      document.querySelector("select").addEventListener("change", function () {
-          const lang = this.value;
-          document.getElementById('resume-title').textContent = languageData[lang].resumeTitle;
-          document.getElementById('home-link').textContent = languageData[lang].home;
-          document.getElementById('education-link').textContent = languageData[lang].education;
-          document.getElementById('skills-link').textContent = languageData[lang].skills;
-          document.getElementById('experience-link').textContent = languageData[lang].experience;
-          document.getElementById('projects-link').textContent = languageData[lang].projects;
-          document.getElementById('references-link').textContent = languageData[lang].references;
-          document.getElementById('others-link').textContent = languageData[lang].others;
-      });
-  };
+  function changeLanguage(lang) {
+    document.getElementById('resume-title').textContent = languageData[lang].resumeTitle;
+    document.getElementById('home-link').textContent = languageData[lang].home;
+    document.getElementById('education-link').textContent = languageData[lang].education;
+    document.getElementById('skills-link').textContent = languageData[lang].skills;
+    document.getElementById('experience-link').textContent = languageData[lang].experience;
+    document.getElementById('projects-link').textContent = languageData[lang].projects;
+    document.getElementById('references-link').textContent = languageData[lang].references;
+    document.getElementById('others-link').textContent = languageData[lang].others;
+  }
+
+  // window.onload = function () {
+  //     document.querySelector("select").addEventListener("change", function () {
+  //         const lang = this.value;
+  //         document.getElementById('resume-title').textContent = languageData[lang].resumeTitle;
+  //         document.getElementById('home-link').textContent = languageData[lang].home;
+  //         document.getElementById('education-link').textContent = languageData[lang].education;
+  //         document.getElementById('skills-link').textContent = languageData[lang].skills;
+  //         document.getElementById('experience-link').textContent = languageData[lang].experience;
+  //         document.getElementById('projects-link').textContent = languageData[lang].projects;
+  //         document.getElementById('references-link').textContent = languageData[lang].references;
+  //         document.getElementById('others-link').textContent = languageData[lang].others;
+  //     });
+  // };
 </script>
 

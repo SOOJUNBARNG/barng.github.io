@@ -86,28 +86,53 @@ a {
 
 header {
   display: flex;
-  justify-content: space-between; /* Pushes content apart */
-  align-items: center; /* Vertically center the header content */
-  width: 100%;
-}
-h1 {
-  color: white;
-  text-align: center;
-  margin: 10px 0; /* Adds spacing above and below */
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 0;
+  background: #fff;
 }
 
-h2 {
-  color: black;
-  text-align: left;
-  padding: 10; /* Adds more space around the text */
-  margin: 10px 0; /* Adds spacing above and below */
+#language-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  align-self: flex-end;
+  margin-bottom: 0.5rem;
 }
 
-h3 {
-  color: black;
-  text-align: left;
-  padding: 10; /* Adds more space around the text */
-  margin: 10px 0; /* Adds spacing above and below */
+nav ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  margin: 1rem 0;
+  display: flex; /* Display items in a row */
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; /* Center-align the navigation links */
+}
+
+nav ul li {
+  margin: 0 15px; /* Space between the navigation items */
+}
+
+nav ul li a {
+  color: white; /* White text for the links */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2em; /* Slightly larger font size */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav ul li a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.profile-pic {
+  width: 120px; /* Adjust size */
+  height: 120px;
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover; /* Ensures proper cropping */
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 /* Content Styles */
@@ -142,46 +167,6 @@ h3 {
   padding-bottom: 10px;
 }
 
-/* Navigation Styles */
-nav ul {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0;
-  margin: 0;
-  display: flex; /* Display items in a row */
-  justify-content: center; /* Center-align the navigation links */
-}
-
-nav ul li {
-  margin: 0 15px; /* Space between the navigation items */
-}
-
-nav ul li a {
-  color: white; /* White text for the links */
-  text-decoration: none; /* Remove underline */
-  font-size: 1.2em; /* Slightly larger font size */
-  transition: color 0.3s ease; /* Smooth transition for color change */
-}
-
-nav ul li a:hover {
-  color: #007bff; /* Change color on hover */
-}
-
-.profile-pic {
-  width: 100px; /* Adjust size */
-  height: 100px;
-  border-radius: 50%; /* Makes it circular */
-  object-fit: cover; /* Ensures proper cropping */
-  border: 2px solid white; /* Optional border */
-}
-
-/* Language shift Styles */
-#language-switcher {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  padding: 10px;
-}
-
 /* Responsive styles */
 @media (max-width: 600px) {
   .container {
@@ -202,5 +187,28 @@ nav ul li a:hover {
   }
   body {
     font-size: 1rem;
+  }
+  header {
+    padding: 1rem 0.2rem;
+  }
+  #language-switcher {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    margin-top: 0.5rem;
+  }
+  h1#resume-title {
+    font-size: 1.2rem;
+    text-align: center;
   }
 }
