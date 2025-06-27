@@ -65,6 +65,14 @@ a {
   flex-grow: 1;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 0;
+  background: #fff;
+}
+
 /* Header Styles */
 .header {
   height: 48px;
@@ -82,14 +90,6 @@ a {
   justify-content: space-between; /* Distribute space between header text and image */
   align-items: center; /* Vertically align the content */
   height: 80px; /* Adjust height to your needs */
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem 0;
-  background: #fff;
 }
 
 #language-switcher {
