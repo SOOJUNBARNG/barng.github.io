@@ -1,214 +1,63 @@
-/* https://www.colordic.org/ */
+/* styles.css */
 
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Zen Kurenaido', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f9f9f9;
-  color: #222;
-}
-
+/* Basic styles for larger screens */
 .container {
-  max-width: 800px;
-  margin: 2rem auto;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-h1, h2 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-ul {
-  padding-left: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-a {
-  color: #007acc;
-  word-break: break-all;
-}
-
-/* App Layout */
-.app {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.main {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-}
-
-.sidebar {
-  width: 96px;
-  background-color: moccasin;
-  box-sizing: border-box;
-  border: 8px solid chocolate;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem 0;
-  background: #fff;
-}
-
-/* Header Styles */
-.header {
-  height: 48px;
-  background-color: lightcyan;
-  box-sizing: border-box;
-  border: 8px solid blue;
-}
-
-#header-placeholder {
-  background-color: #dc143c;
-  color: white;
+  max-width: 960px;
+  /* Or a suitable max-width */
+  margin: 0 auto;
+  /* Center the container */
   padding: 20px;
-  border: 1px solid #ccc;
+}
+
+header nav ul {
   display: flex;
-  justify-content: space-between; /* Distribute space between header text and image */
-  align-items: center; /* Vertically align the content */
-  height: 80px; /* Adjust height to your needs */
-}
-
-#language-switcher {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  padding: 10px;
-  align-self: flex-end;
-  margin-bottom: 0.5rem;
-}
-
-nav ul {
-  list-style-type: none; /* Remove default list styling */
+  /* Use flexbox for navigation items */
+  justify-content: space-around;
+  list-style: none;
   padding: 0;
-  margin: 1rem 0;
-  display: flex; /* Display items in a row */
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center; /* Center-align the navigation links */
 }
 
-nav ul li {
-  margin: 0 15px; /* Space between the navigation items */
-}
-
-nav ul li a {
-  color: white; /* White text for the links */
-  text-decoration: none; /* Remove underline */
-  font-size: 1.2em; /* Slightly larger font size */
-  transition: color 0.3s ease; /* Smooth transition for color change */
-}
-
-nav ul li a:hover {
-  color: #007bff; /* Change color on hover */
-}
-
-.profile-pic {
-  width: 120px; /* Adjust size */
-  height: 120px;
-  border-radius: 50%; /* Makes it circular */
-  object-fit: cover; /* Ensures proper cropping */
-  margin-top: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-/* Content Styles */
-.flex-content {
-  flex-grow: 1;
-  background-color: palegoldenrod;
-  box-sizing: border-box;
-  border: 8px solid green;
-}
-
-.fixed-content {
-  height: 128px;
-  background-color: thistle;
-  box-sizing: border-box;
-  border: 8px solid darkmagenta;
-}
-
-.foldable-header {
-  cursor: pointer;
-  background: #f0f0f0;
-  padding: 5px;
-  margin: 5px 0;
-  border-radius: 5px;
-}
-
-.foldable-header:hover {
-  background: #ddd;
-}
-
-.foldable-content {
-  padding-left: 20px;
-  padding-bottom: 10px;
-}
-
-/* Responsive styles */
-@media (max-width: 600px) {
+/* Styles for smaller screens (e.g., less than 768px wide) */
+@media (max-width: 768px) {
   .container {
-    max-width: 100%;
-    margin: 0;
-    padding: 1rem 0.5rem;
-    border-radius: 0;
-    box-shadow: none;
+    padding: 10px;
+    /* Reduce padding on smaller screens */
   }
-  h1 {
-    font-size: 1.6rem;
-  }
-  h2 {
-    font-size: 1.2rem;
-  }
-  ul, li {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  header {
-    padding: 1rem 0.2rem;
-  }
-  #language-switcher {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 0.5rem;
-  }
-  nav ul {
+
+  header nav ul {
     flex-direction: column;
-    gap: 0.5rem;
+    /* Stack navigation items vertically */
     align-items: center;
+    /* Center them */
   }
+
+  header nav ul li {
+    margin-bottom: 10px;
+    /* Add some space between stacked items */
+  }
+
   .profile-pic {
-    width: 80px;
-    height: 80px;
-    margin-top: 0.5rem;
+    width: 100px;
+    /* Adjust profile picture size for mobile */
+    height: 100px;
   }
-  h1#resume-title {
-    font-size: 1.2rem;
-    text-align: center;
+
+  /* Adjust font sizes for readability on smaller screens */
+  h1 {
+    font-size: 1.8em;
   }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p,
+  li {
+    font-size: 1em;
+  }
+}
+
+/* For even smaller screens, like phones */
+@media (max-width: 480px) {
+  /* Further adjustments if needed */
 }
