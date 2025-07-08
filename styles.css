@@ -17,6 +17,21 @@ header nav ul {
   padding: 0;
 }
 
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.education-header h3 {
+  margin: 0;
+}
+
+.date-range {
+  white-space: nowrap;
+  font-weight: normal;
+}
+
 /* Styles for smaller screens (e.g., less than 768px wide) */
 @media (max-width: 768px) {
   .container {
