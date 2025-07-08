@@ -3,44 +3,24 @@
 /* Basic styles for larger screens */
 .container {
   max-width: 960px;
-  /* Or a suitable max-width */
   margin: 0 auto;
-  /* Center the container */
   padding: 20px;
 }
 
-#language-switcher {
-  align-self: flex-end;
-  margin: 10px;
-}
-
-#resume-title {
-  font-size: 2em;
-  margin: 10px 0;
-  text-align: center;
-}
-
-header nav ul {
+/* Header specific styles */
+header {
   display: flex;
-  /* Use flexbox for navigation items */
-  justify-content: space-around;
-  list-style: none;
-  padding: 0;
-}
-
-.education-header {
-  display: flex;
-  justify-content: space-between;
+  /* Use flexbox for the header content */
+  flex-direction: column;
+  /* Stack items vertically by default */
   align-items: center;
-}
-
-.education-header h3 {
-  margin: 0;
-}
-
-.date-range {
-  white-space: nowrap;
-  font-weight: normal;
+  /* Center items horizontally */
+  text-align: center;
+  /* Center text within the header */
+  padding-bottom: 20px;
+  /* Add some space below the header */
+  border-bottom: 1px solid #eee;
+  /* Optional: A subtle line to separate header */
 }
 
 .profile-pic {
@@ -48,15 +28,83 @@ header nav ul {
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  margin-top: 15px;
+  margin-bottom: 15px;
+  /* Space below the picture */
   border: 2px solid #999;
 }
 
-/* Styles for smaller screens (e.g., less than 768px wide) */
+#resume-title {
+  font-size: 2.2em;
+  /* Slightly larger for prominence */
+  margin: 10px 0 20px 0;
+  /* Adjust margins */
+  color: #333;
+  /* A bit softer color */
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  /* Center navigation items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  /* Allow navigation items to wrap on smaller screens */
+}
+
+header nav ul li {
+  margin: 0 15px;
+  /* Space between nav items */
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #007bff;
+  /* Example link color */
+  font-weight: bold;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #0056b3;
+  /* Darker on hover */
+}
+
+#language-switcher {
+  /* Position the language switcher */
+  align-self: flex-end;
+  /* Aligns to the end of the flex container (header) */
+  margin: 10px;
+  position: absolute;
+  /* Position absolutely relative to the container or body if no relative parent */
+  top: 20px;
+  right: 20px;
+}
+
+
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
   .container {
     padding: 10px;
-    /* Reduce padding on smaller screens */
+  }
+
+  header {
+    flex-direction: column;
+    /* Ensure vertical stacking on small screens */
+    padding-bottom: 15px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  #resume-title {
+    font-size: 1.8em;
+    margin: 5px 0 15px 0;
   }
 
   header nav ul {
@@ -67,42 +115,83 @@ header nav ul {
   }
 
   header nav ul li {
-    margin-bottom: 10px;
-    /* Add some space between stacked items */
+    margin: 5px 0;
+    /* Adjust spacing for stacked items */
   }
 
-  .profile-pic {
-    width: 100px;
-    /* Adjust profile picture size for mobile */
-    height: 100px;
-  }
-
-  /* Adjust font sizes for readability on smaller screens */
-  h1 {
-    font-size: 1.8em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  p,
-  li {
-    font-size: 1em;
+  #language-switcher {
+    position: static;
+    /* Remove absolute positioning on small screens */
+    margin: 10px auto;
+    /* Center it if it's part of the flow */
+    align-self: center;
+    /* Center in the flex container */
   }
 }
 
 /* For even smaller screens, like phones */
 @media (max-width: 480px) {
+
   /* Further adjustments if needed */
+  #resume-title {
+    font-size: 1.5em;
+  }
 }
 
-/* styles.css */
-.profile-pic {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  /* Remove extra space below image */
-  margin: 0 auto;
-  /* Center image if it's a block element */
+/* General body and section styling for better readability */
+body {
+  font-family: 'Zen Kurenaido', sans-serif;
+  /* Apply the font */
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  /* Light background */
+}
+
+section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #007bff;
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  color: #777;
+  font-size: 0.9em;
 }
