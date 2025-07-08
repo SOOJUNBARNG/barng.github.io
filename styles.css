@@ -96,3 +96,13 @@ header nav ul {
 @media (max-width: 480px) {
   /* Further adjustments if needed */
 }
+
+/* styles.css */
+.profile-pic {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* Remove extra space below image */
+  margin: 0 auto;
+  /* Center image if it's a block element */
+}
