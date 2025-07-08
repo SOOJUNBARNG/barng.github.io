@@ -9,6 +9,17 @@
   padding: 20px;
 }
 
+#language-switcher {
+  align-self: flex-end;
+  margin: 10px;
+}
+
+#resume-title {
+  font-size: 2em;
+  margin: 10px 0;
+  text-align: center;
+}
+
 header nav ul {
   display: flex;
   /* Use flexbox for navigation items */
@@ -30,6 +41,15 @@ header nav ul {
 .date-range {
   white-space: nowrap;
   font-weight: normal;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 15px;
+  border: 2px solid #999;
 }
 
 /* Styles for smaller screens (e.g., less than 768px wide) */
