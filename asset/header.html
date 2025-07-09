@@ -1,13 +1,7 @@
 <header>
-  <div id="language-switcher">
-    <select onchange="handleLanguageChange(this.value)" style="padding: 8px; font-size: 14px;">
-      <option value="en">English</option>
-      <option value="jp">日本語</option>
-      <option value="kr">한국어</option>
-    </select>
-  </div>
-  <div class="nav-container">
-    <!-- <img src="/barng.github.io/asset/self_picture.png" alt="Profile Picture" class="profile-pic" /> -->
+  <div class="header-top-row">
+    <img src="/barng.github.io/asset/self_picture.png" alt="Profile Picture" class="profile-pic">
+
     <nav>
       <ul>
         <li><a href="/barng.github.io/index.html" id="home-link">Home</a></li>
@@ -20,6 +14,14 @@
       </ul>
     </nav>
   </div>
+
+  <div id="language-switcher">
+    <select onchange="handleLanguageChange(this.value)" style="padding: 8px; font-size: 14px;">
+      <option value="en">English</option>
+      <option value="jp">日本語</option>
+      <option value="kr">한국어</option>
+    </select>
+  </div>
 </header>
 
 <script>
@@ -30,7 +32,7 @@
   };
 
   function applyLanguage(lang) {
-    if (!headerLanguageData[lang]) return; // 데이터가 없으면 종료
+    if (!headerLanguageData[lang]) return;
 
     document.getElementById('home-link').textContent = headerLanguageData[lang].home;
     document.getElementById('education-link').textContent = headerLanguageData[lang].education;
@@ -42,14 +44,12 @@
   }
 
   function handleLanguageChange(lang) {
-    // 언어 변경을 적용하고, 선택한 언어를 저장합니다.
     applyLanguage(lang);
     localStorage.setItem('selectedLanguage', lang);
   }
 
-  // 스크립트가 로드되는 즉시 실행될 초기화 함수
   function initializeHeaderLanguage() {
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en'; // 저장된 언어가 없으면 영어로 시작
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     const selectElement = document.querySelector('#language-switcher select');
 
     if (selectElement) {
@@ -58,6 +58,5 @@
     }
   }
 
-  // 헤더 언어 초기화 함수를 바로 호출합니다.
   initializeHeaderLanguage();
 </script>
