@@ -1,87 +1,64 @@
-<div id="header-placeholder">
-  <header>
-    <div class="nav-container">
-      <img src="/barng.github.io/asset/self_picture.png" alt="Profile Picture" class="profile-pic" />
-      <nav>
-        <ul>
-          <li><a href="/barng.github.io/index.html" id="home-link">Home</a></li>
-          <li><a href="/barng.github.io/pages/education.html" id="education-link">Education</a></li>
-          <li><a href="/barng.github.io/pages/skill.html" id="skills-link">Skills</a></li>
-          <li><a href="/barng.github.io/pages/experience.html" id="experience-link">Experiences</a></li>
-          <li><a href="/barng.github.io/pages/projects.html" id="projects-link">Projects</a></li>
-          <li><a href="/barng.github.io/pages/references.html" id="references-link">References</a></li>
-          <li><a href="/barng.github.io/pages/sub_job.html" id="others-link">Others</a></li>
-        </ul>
-      </nav>
+<header>
+  <div class="nav-container">
+    <!-- <img src="/barng.github.io/asset/self_picture.png" alt="Profile Picture" class="profile-pic" /> -->
+    <nav>
+      <ul>
+        <li><a href="/barng.github.io/index.html" id="home-link">Home</a></li>
+        <li><a href="/barng.github.io/pages/education.html" id="education-link">Education</a></li>
+        <li><a href="/barng.github.io/pages/skill.html" id="skills-link">Skills</a></li>
+        <li><a href="/barng.github.io/pages/experience.html" id="experience-link">Experiences</a></li>
+        <li><a href="/barng.github.io/pages/projects.html" id="projects-link">Projects</a></li>
+        <li><a href="/barng.github.io/pages/references.html" id="references-link">References</a></li>
+        <li><a href="/barng.github.io/pages/sub_job.html" id="others-link">Others</a></li>
+      </ul>
+    </nav>
+
+    <div id="language-switcher">
+      <select onchange="handleLanguageChange(this.value)" style="padding: 8px; font-size: 14px;">
+        <option value="en">English</option>
+        <option value="jp">日本語</option>
+        <option value="kr">한국어</option>
+      </select>
     </div>
-  </header>
-</div>
-  
+  </div>
+</header>
+
 <script>
-  // Language Data (keep this in header.html if you want header.html to manage language switching for itself)
-  const languageData = {
-    en: {
-      resumeTitle: "Resume & Career",
-      home: "Home",
-      education: "Education",
-      skills: "Skills",
-      experience: "Experiences",
-      projects: "Projects",
-      references: "References",
-      others: "Others"
-    },
-    jp: {
-      resumeTitle: "履歴書及び職務経歴書",
-      home: "ホーム",
-      education: "学歴",
-      skills: "スキル",
-      experience: "職歴",
-      projects: "プロジェクト",
-      references: "参考文献",
-      others: "その他"
-    },
-    kr: {
-      resumeTitle: "이력서 및 직무 경력서",
-      home: "홈",
-      education: "학력",
-      skills: "스킬",
-      experience: "직무경험",
-      projects: "프로젝트",
-      references: "기타활동",
-      others: "기타"
-    }
+  const headerLanguageData = {
+    en: { home: "Home", education: "Education", skills: "Skills", experience: "Experiences", projects: "Projects", references: "References", others: "Others" },
+    jp: { home: "ホーム", education: "学歴", skills: "スキル", experience: "職歴", projects: "プロジェクト", references: "参考文献", others: "その他" },
+    kr: { home: "홈", education: "학력", skills: "스킬", experience: "직무경험", projects: "프로젝트", references: "기타활동", others: "기타" }
   };
 
-  function changeLanguage(lang) {
-    // Update header elements
-    document.getElementById('resume-title').textContent = languageData[lang].resumeTitle;
-    document.getElementById('home-link').textContent = languageData[lang].home;
-    document.getElementById('education-link').textContent = languageData[lang].education;
-    document.getElementById('skills-link').textContent = languageData[lang].skills;
-    document.getElementById('experience-link').textContent = languageData[lang].experience;
-    document.getElementById('projects-link').textContent = languageData[lang].projects;
-    document.getElementById('references-link').textContent = languageData[lang].references;
-    document.getElementById('others-link').textContent = languageData[lang].others;
+  function applyLanguage(lang) {
+    if (!headerLanguageData[lang]) return; // 데이터가 없으면 종료
 
-    // If you want to update content on the main page, you'll need to dispatch a custom event
-    // or have a global function that main page scripts can listen to/call.
-    // For simplicity here, we assume header only changes its own elements.
-    // For the main page content, the language switching logic in index.html (currently commented out)
-    // would need to be active and properly integrated.
+    document.getElementById('home-link').textContent = headerLanguageData[lang].home;
+    document.getElementById('education-link').textContent = headerLanguageData[lang].education;
+    document.getElementById('skills-link').textContent = headerLanguageData[lang].skills;
+    document.getElementById('experience-link').textContent = headerLanguageData[lang].experience;
+    document.getElementById('projects-link').textContent = headerLanguageData[lang].projects;
+    document.getElementById('references-link').textContent = headerLanguageData[lang].references;
+    document.getElementById('others-link').textContent = headerLanguageData[lang].others;
   }
 
-  // Initial language setting for the header when loaded
-  window.addEventListener('DOMContentLoaded', () => {
-    const initialLang = localStorage.getItem('selectedLanguage') || 'en'; // Or default to 'jp' if preferred
-    const selectElement = document.querySelector('#language-switcher-actual select');
-    if (selectElement) {
-      selectElement.value = initialLang;
-      changeLanguage(initialLang); // Apply initial language
-    }
-  });
+  function handleLanguageChange(lang) {
+    // 언어 변경을 적용하고, 선택한 언어를 저장합니다.
+    applyLanguage(lang);
+    localStorage.setItem('selectedLanguage', lang);
+  }
 
-  // Store language preference (optional)
-  document.querySelector('#language-switcher-actual select').addEventListener('change', function () {
-    localStorage.setItem('selectedLanguage', this.value);
-  });
+  // 스크립트가 로드되는 즉시 실행될 초기화 함수
+  function initializeHeaderLanguage() {
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en'; // 저장된 언어가 없으면 영어로 시작
+    const selectElement = document.querySelector('#language-switcher select');
+
+    if (selectElement) {
+      selectElement.value = savedLang;
+      applyLanguage(savedLang);
+    }
+  }
+
+  // 헤더 언어 초기화 함수를 바로 호출합니다.
+  initializeHeaderLanguage();
 </script>
