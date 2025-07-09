@@ -9,11 +9,12 @@
 
 .nav-container {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
   font-size: 1.1em;
+  margin-top: 40px;
 }
 
 /* Header specific styles */
