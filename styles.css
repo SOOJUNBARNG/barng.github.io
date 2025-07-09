@@ -1,184 +1,133 @@
 /* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600&display=swap');
 
-/* Basic styles for larger screens */
+/* ---- VARIABLES & GENERAL STYLES ---- */
+:root {
+  --primary-color: #2c3e50;
+  /* A dark, professional blue */
+  --secondary-color: #3498db;
+  /* A bright, clear blue for links/accents */
+  --background-color: #f8f9fa;
+  /* A very light, clean grey */
+  --text-color: #34495e;
+  /* A softer, dark grey for text */
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Lato', sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.7;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
 .container {
   max-width: 960px;
-  margin-left: 0;
-  margin-right: auto;
+  margin: 0 auto;
+  /* Centering the main container */
   padding: 20px;
 }
 
-.nav-container {
-  display: flex;
-  align-items: left;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-  font-size: 1.1em;
-  margin-top: 40px;
-}
-
-/* Header specific styles */
+/* ---- HEADER ---- */
 header {
-  display: flex;
-  /* Use flexbox for the header content */
-  flex-direction: column;
-  /* Stack items vertically by default */
-  align-items: center;
-  /* Center items horizontally */
   text-align: center;
-  /* Center text within the header */
-  padding-bottom: 20px;
-  /* Add some space below the header */
-  border-bottom: 1px solid #eee;
-  /* Optional: A subtle line to separate header */
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 40px;
+  position: relative;
+  /* For positioning the language switcher */
 }
 
 .profile-pic {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 8%;
-  margin-bottom: 8px;
-  /* Space below the picture */
-  border: 2px solid #999;
+  border-radius: 50%;
+  /* A circular profile picture looks more modern */
+  margin-bottom: 15px;
+  border: 4px solid var(--secondary-color);
 }
 
 #resume-title {
-  font-size: 2.2em;
-  /* Slightly larger for prominence */
-  margin: 10px 0 20px 0;
-  /* Adjust margins */
-  color: #333;
-  /* A bit softer color */
+  font-family: var(--heading-font);
+  font-size: 2.5em;
+  margin: 10px 0;
+  color: var(--primary-color);
 }
 
-header nav ul {
+/* ---- NAVIGATION ---- */
+.nav-container {
   display: flex;
   justify-content: center;
-  /* Center navigation items */
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  /* Center the navigation links */
+  gap: 30px;
   flex-wrap: wrap;
-  /* Allow navigation items to wrap on smaller screens */
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  /* Space below the navigation */
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-header nav ul li {
-  margin: 0 15px;
-  /* Space between nav items */
-}
-
-header nav ul li a {
+.nav-container a {
   text-decoration: none;
-  color: #000000;
-  /* Example link color */
-  font-weight: bold;
-  padding: 5px 0;
-  transition: color 0.3s ease;
+  color: var(--primary-color);
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 
-header nav ul li a:hover {
-  color: #000000;
-  /* Darker on hover */
+.nav-container a:hover {
+  color: #ffffff;
+  background-color: var(--secondary-color);
 }
 
+
+/* ---- LANGUAGE SWITCHER ---- */
 #language-switcher {
-  /* Position the language switcher */
-  align-self: flex-end;
-  /* Aligns to the end of the flex container (header) */
-  margin: 10px;
   position: absolute;
-  /* Position absolutely relative to the container or body if no relative parent */
   top: 20px;
   right: 20px;
 }
 
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-
-  header {
-    flex-direction: column;
-    /* Ensure vertical stacking on small screens */
-    padding-bottom: 15px;
-  }
-
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-  }
-
-  #resume-title {
-    font-size: 1.8em;
-    margin: 5px 0 15px 0;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    /* Stack navigation items vertically */
-    align-items: center;
-    /* Center them */
-  }
-
-  header nav ul li {
-    margin: 5px 0;
-    /* Adjust spacing for stacked items */
-  }
-
-  #language-switcher {
-    position: static;
-    /* Remove absolute positioning on small screens */
-    margin: 10px auto;
-    /* Center it if it's part of the flow */
-    align-self: center;
-    /* Center in the flex container */
-  }
+#language-switcher select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
 }
 
-/* For even smaller screens, like phones */
-@media (max-width: 480px) {
 
-  /* Further adjustments if needed */
-  #resume-title {
-    font-size: 1.5em;
-  }
-}
-
-/* General body and section styling for better readability */
-body {
-  font-family: 'Zen Kurenaido', sans-serif;
-  /* Apply the font */
-  line-height: 1.6;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  /* Light background */
-}
-
+/* ---- SECTIONS & CONTENT ---- */
 section {
   background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  /* A subtle border instead of shadow */
 }
 
 h2 {
-  color: #000000;
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  font-size: 1.8em;
   margin-top: 0;
-  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--secondary-color);
+  display: inline-block;
+  /* Makes the border only as long as the text */
 }
 
 hr {
-  border: 0;
-  border-top: 1px solid #eee;
-  margin: 20px 0;
+  display: none;
+  /* The new heading style makes this redundant */
 }
 
 ul {
@@ -187,22 +136,81 @@ ul {
 }
 
 ul li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
 }
 
+/* Custom bullet points for a cleaner look */
+ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+
 ul li a {
-  color: #000000;
+  color: var(--secondary-color);
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 ul li a:hover {
   text-decoration: underline;
+  color: var(--primary-color);
 }
 
+
+/* ---- FOOTER ---- */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   margin-top: 20px;
   color: #777;
   font-size: 0.9em;
+}
+
+/* ---- RESPONSIVE DESIGN ---- */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  header {
+    padding: 30px 15px;
+  }
+
+  #resume-title {
+    font-size: 2em;
+  }
+
+  #language-switcher {
+    position: static;
+    /* Let it flow in the document */
+    margin: 20px auto 0;
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  section {
+    padding: 20px;
+  }
 }
