@@ -73,33 +73,6 @@ header nav ul {
 }
 
 
-/* ---- NAVIGATION ---- */
-.nav-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  gap: 30px;
-  flex-wrap: wrap;
-  font-size: 1.1em;
-  margin-bottom: 40px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.nav-container a {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: 700;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.nav-container a:hover {
-  color: #ffffff;
-  background-color: var(--secondary-color);
-}
-
 /* Navigation list styling */
 nav ul {
   display: flex;
@@ -246,39 +219,40 @@ footer {
   }
 }
 
-/* ---- 가로 헤더 레이아웃 (넓은 화면용) ---- */
-@media (min-width: 768px) {
+/* ---- RESPONSIVE DESIGN FOR MOBILE ---- */
+@media (max-width: 768px) {
+
+  /* Make the main header padding smaller on mobile */
   header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    /* 프로필 영역과 제목 사이 간격 */
-    text-align: left;
+    padding: 20px 15px;
+    gap: 25px;
+    /* Adjust gap for mobile */
   }
 
-  /* 프로필 사진과 언어 전환기를 묶는 영역 */
-  .profile-area {
-    display: flex;
+  /* Stack the profile picture and navigation menu vertically */
+  .header-top-row {
     flex-direction: column;
-    /* 세로로 정렬 */
+    gap: 25px;
+    /* Space between picture and nav menu */
+  }
+
+  /* Stack the navigation links vertically so they don't overflow */
+  nav ul {
+    flex-direction: column;
     align-items: center;
+    /* Center the links */
+    gap: 15px;
+    /* Space between each link */
   }
 
-  .profile-pic {
-    height: 60px; /* You can adjust the size if you like */
-    width: 60px;
-    border-radius: 8px;/* Keeps the nice rounded-square border */
+  /* Center the language switcher below everything */
+  #language-switcher {
+    align-self: center;
   }
 
-  #resume-title {
-    margin: 0;
-  }
-
-  #language-switcher select {
-    margin-top: 15px;
-    /* 프로필 사진과의 간격 */
+  /* You can keep these general mobile styles */
+  .container {
+    padding: 15px;
   }
 }
 
