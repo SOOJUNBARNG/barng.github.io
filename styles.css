@@ -4,13 +4,9 @@
 /* ---- VARIABLES & GENERAL STYLES ---- */
 :root {
   --primary-color: #2c3e50;
-  /* A dark, professional blue */
   --secondary-color: #3498db;
-  /* A bright, clear blue for links/accents */
   --background-color: #f8f9fa;
-  /* A very light, clean grey */
   --text-color: #34495e;
-  /* A softer, dark grey for text */
   --heading-font: 'Montserrat', sans-serif;
   --body-font: 'Lato', sans-serif;
 }
@@ -27,7 +23,6 @@ body {
 .container {
   max-width: 960px;
   margin: 0 auto;
-  /* Centering the main container */
   padding: 20px;
 }
 
@@ -38,17 +33,14 @@ header {
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 40px;
-  position: relative;
-  /* For positioning the language switcher */
 }
 
 .profile-pic {
   width: 120px;
   height: 120px;
   object-fit: cover;
-  border-radius: 50%;
-  /* A circular profile picture looks more modern */
-  margin-bottom: 15px;
+  border-radius: 8px;
+  /* 둥근 모서리의 사각형으로 변경 */
   border: 4px solid var(--secondary-color);
 }
 
@@ -59,16 +51,15 @@ header {
   color: var(--primary-color);
 }
 
+
 /* ---- NAVIGATION ---- */
 .nav-container {
   display: flex;
   justify-content: center;
-  /* Center the navigation links */
   gap: 30px;
   flex-wrap: wrap;
   font-size: 1.1em;
   margin-bottom: 40px;
-  /* Space below the navigation */
   padding-bottom: 15px;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -89,18 +80,14 @@ header {
 
 
 /* ---- LANGUAGE SWITCHER ---- */
-#language-switcher {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
 #language-switcher select {
   padding: 8px 12px;
   font-size: 14px;
   border-radius: 5px;
   border: 1px solid #ccc;
   background-color: #fff;
+  margin-top: 15px;
+  /* 프로필 사진과의 간격 */
 }
 
 
@@ -111,7 +98,6 @@ section {
   margin-bottom: 30px;
   border-radius: 8px;
   border: 1px solid #e0e0e0;
-  /* A subtle border instead of shadow */
 }
 
 h2 {
@@ -122,12 +108,10 @@ h2 {
   padding-bottom: 10px;
   border-bottom: 2px solid var(--secondary-color);
   display: inline-block;
-  /* Makes the border only as long as the text */
 }
 
 hr {
   display: none;
-  /* The new heading style makes this redundant */
 }
 
 ul {
@@ -141,7 +125,6 @@ ul li {
   position: relative;
 }
 
-/* Custom bullet points for a cleaner look */
 ul li::before {
   content: '›';
   position: absolute;
@@ -174,6 +157,43 @@ footer {
   font-size: 0.9em;
 }
 
+/* --- Add these styles for the foldable sections --- */
+.foldable-header {
+  cursor: pointer;
+  /* Makes the header look clickable */
+  user-select: none;
+  /* Prevents text selection when clicking */
+  position: relative;
+  padding-right: 20px;
+  /* Space for the +/- indicator */
+}
+
+/* Add a plus (+) symbol by default */
+.foldable-header::after {
+  content: '+';
+  position: absolute;
+  right: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #777;
+}
+
+/* Change the symbol to a minus (-) when active/open */
+.foldable-header.active::after {
+  content: '−';
+}
+
+.foldable-content {
+  display: none;
+  /* Hide the content by default */
+  padding-left: 20px;
+  /* Indent the content slightly */
+  border-left: 2px solid #e0e0e0;
+  /* Add a nice vertical line */
+  margin-left: 5px;
+}
+
+
 /* ---- RESPONSIVE DESIGN ---- */
 @media (max-width: 768px) {
   .container {
@@ -187,13 +207,39 @@ footer {
   #resume-title {
     font-size: 2em;
   }
+}
 
-  #language-switcher {
-    position: static;
-    /* Let it flow in the document */
-    margin: 20px auto 0;
-    display: block;
-    text-align: center;
+/* ---- 가로 헤더 레이아웃 (넓은 화면용) ---- */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    /* 프로필 영역과 제목 사이 간격 */
+    text-align: left;
+  }
+
+  /* 프로필 사진과 언어 전환기를 묶는 영역 */
+  .profile-area {
+    display: flex;
+    flex-direction: column;
+    /* 세로로 정렬 */
+    align-items: center;
+  }
+
+  .profile-pic {
+    margin-bottom: 0;
+  }
+
+  #resume-title {
+    margin: 0;
+  }
+
+  #language-switcher select {
+    margin-top: 15px;
+    /* 프로필 사진과의 간격 */
   }
 }
 
@@ -212,33 +258,5 @@ footer {
 
   section {
     padding: 20px;
-  }
-}
-
-/* ---- 가로 헤더 레이아웃 (넓은 화면용) ---- */
-@media (min-width: 768px) {
-  header {
-    display: flex;
-    /* Flexbox를 사용하여 수평 정렬 활성화 */
-    flex-direction: row;
-    /* 요소들을 가로로 나열 */
-    justify-content: center;
-    /* 가운데 정렬 */
-    align-items: center;
-    /* 세로축에서 중앙에 오도록 정렬 */
-    gap: 30px;
-    /* 프로필 사진과 제목 사이의 간격 */
-    text-align: left;
-    /* 제목 텍스트를 왼쪽 정렬 */
-  }
-
-  .profile-pic {
-    margin-bottom: 0;
-    /* 기존 하단 마진 제거 */
-  }
-
-  #resume-title {
-    margin: 0;
-    /* 기존 마진 제거 */
   }
 }
