@@ -35,6 +35,17 @@ header {
   margin-bottom: 40px;
 }
 
+/* This ensures the navigation links themselves are also in a row */
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 25px;
+  /* Adjust space between each navigation link */
+}
+
 .profile-pic {
   width: 120px;
   height: 120px;
@@ -56,6 +67,7 @@ header {
 .nav-container {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   gap: 30px;
   flex-wrap: wrap;
   font-size: 1.1em;
@@ -230,7 +242,9 @@ footer {
   }
 
   .profile-pic {
-    margin-bottom: 0;
+    height: 60px; /* You can adjust the size if you like */
+    width: 60px;
+    border-radius: 8px;/* Keeps the nice rounded-square border */
   }
 
   #resume-title {
