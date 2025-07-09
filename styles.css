@@ -214,3 +214,31 @@ footer {
     padding: 20px;
   }
 }
+
+/* ---- 가로 헤더 레이아웃 (넓은 화면용) ---- */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    /* Flexbox를 사용하여 수평 정렬 활성화 */
+    flex-direction: row;
+    /* 요소들을 가로로 나열 */
+    justify-content: center;
+    /* 가운데 정렬 */
+    align-items: center;
+    /* 세로축에서 중앙에 오도록 정렬 */
+    gap: 30px;
+    /* 프로필 사진과 제목 사이의 간격 */
+    text-align: left;
+    /* 제목 텍스트를 왼쪽 정렬 */
+  }
+
+  .profile-pic {
+    margin-bottom: 0;
+    /* 기존 하단 마진 제거 */
+  }
+
+  #resume-title {
+    margin: 0;
+    /* 기존 마진 제거 */
+  }
+}
