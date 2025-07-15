@@ -33,7 +33,7 @@ body {
 
 /* --- ヘッダーレイアウト --- */
 /* This is the main container for the header */
-.site-header {
+header.site-header {
   display: flex; /* Use Flexbox for alignment */
   justify-content: space-between; /* Pushes children to opposite ends */
   align-items: center; /* Vertically aligns children in the middle */
@@ -43,14 +43,14 @@ body {
 }
 
 /* This is the container for your picture AND the language switcher */
-.header-left {
+header.site-header .header-left {
   display: flex;
   flex-direction: column; /* Stacks items vertically */
   align-items: center;  /* Horizontally centers the items inside */
   gap: 10px; /* Adds a small space between the picture and the switcher */
 }
 
-.profile-pic {
+header.site-header .profile-pic {
   width: 120px;
   height: 120px;
   object-fit: cover;
@@ -72,7 +72,7 @@ body {
   display: flex; /* Ensures it aligns well with the left part */
 }
 
-.main-nav ul {
+header.site-header .main-nav ul {
   display: grid;
   grid-template-columns: repeat(4, auto); /* Creates a grid for the links */
   gap: 15px 25px; /* Space between the links */
