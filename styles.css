@@ -32,20 +32,22 @@ body {
 }
 
 /* --- ヘッダーレイアウト --- */
+/* This is the main container for the header */
 .site-header {
-  display: flex;
-  justify-content: space-between; /* 左の要素と右のナビゲーションを両端に配置 */
-  align-items: center; /* 要素を垂直方向の中央に揃える */
-  padding: 20px;
-  border-bottom: 1px solid #eee; /* ヘッダーの下に区切り線 */
+  display: flex; /* Use Flexbox for alignment */
+  justify-content: space-between; /* Pushes children to opposite ends */
+  align-items: center; /* Vertically aligns children in the middle */
+  padding: 20px 30px; /* Adds some spacing around the header */
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
-/* 左側の要素（写真と言語スイッチ）のコンテナ */
+/* This is the container for your picture AND the language switcher */
 .header-left {
   display: flex;
-  flex-direction: column; /* 子要素を縦に並べる */
-  align-items: center;  /* 子要素を中央揃えにする */
-  flex-shrink: 0; /* コンテナが縮まないようにする */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center;  /* Horizontally centers the items inside */
+  gap: 10px; /* Adds a small space between the picture and the switcher */
 }
 
 .profile-pic {
