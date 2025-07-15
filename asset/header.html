@@ -20,6 +20,40 @@
 </div>
   
 <script>
+  // ヘッダーを動的に読み込み、その後言語スイッチャーを読み込む
+  fetch('/barng.github.io/asset/header.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+          // header.htmlの読み込みが完了した後に、その中のコンテナにlanguage_switcher.htmlを読み込む
+          return fetch('/barng.github.io/asset/language_switcher.html');
+      })
+      .then(response => response.text())
+      .then(data => {
+          // header.html内に作成した専用のコンテナに挿入する
+          const switcherContainer = document.getElementById('language-switcher-container');
+          if (switcherContainer) {
+              switcherContainer.innerHTML = data;
+          }
+          
+          // ここで言語切り替えの初期化やイベントリスナーを設定するのが望ましい
+          // 元のheader.htmlにあったスクリプトのロジックをここに統合する
+          const initialLang = localStorage.getItem('selectedLanguage') || 'en';
+          const selectElement = document.querySelector('#language-switcher-container select');
+          if (selectElement) {
+              selectElement.value = initialLang;
+              // changeLanguage関数を呼び出す（index.html内の関数が使われる）
+              changeLanguage(initialLang); 
+
+              selectElement.addEventListener('change', function () {
+                  const selectedLang = this.value;
+                  localStorage.setItem('selectedLanguage', selectedLang);
+                  // メインコンテンツと言語スイッチャー自身の両方の言語を変更
+                  changeLanguage(selectedLang); 
+              });
+          }
+      })
+      .catch(error => console.error('Error loading assets:', error));
   // Language Data (keep this in header.html if you want header.html to manage language switching for itself)
   const languageData = {
     en: {
@@ -74,7 +108,7 @@
 
   // Initial language setting for the header when loaded
   window.addEventListener('DOMContentLoaded', () => {
-    const initialLang = localStorage.getItem('selectedLanguage') || 'en'; // Or default to 'jp' if preferred
+    const initialLang = localStorage.getItem('selectedLanguage') || 'jp'; // Or default to 'jp' if preferred
     const selectElement = document.querySelector('#language-switcher-actual select');
     if (selectElement) {
       selectElement.value = initialLang;
@@ -82,8 +116,4 @@
     }
   });
 
-  // Store language preference (optional)
-  document.querySelector('#language-switcher-actual select').addEventListener('change', function () {
-    localStorage.setItem('selectedLanguage', this.value);
-  });
 </script>
