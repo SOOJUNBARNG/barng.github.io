@@ -129,7 +129,7 @@ function initializeLanguage() {
     const selectElement = document.querySelector('#language-switcher-container select');
     if (!selectElement) return;
 
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+    const savedLang = localStorage.getItem('selectedLanguage') || 'jp';
     selectElement.value = savedLang;
     changeLanguage(savedLang);
 
