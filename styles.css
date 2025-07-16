@@ -95,12 +95,6 @@ header.site-header .main-nav ul {
 
 
 /* ---- LANGUAGE SWITCHER ---- */
-#language-switcher {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
 #language-switcher select {
   padding: 8px 12px;
   font-size: 14px;
