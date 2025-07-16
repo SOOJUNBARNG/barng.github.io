@@ -34,7 +34,7 @@ body {
 /* --- ヘッダーレイアウト --- */
 /* This is the main container for the header */
 header.site-header {
-  justify-content: flex-startS;/* display: flex; /* Use Flexbox for alignment */
+  justify-content: flex-start;/* display: flex; /* Use Flexbox for alignment */
   /* justify-content: space-between; Pushes children to opposite ends */
   align-items: center; /* Vertically aligns children in the middle */
   padding: 20px 30px; /* Adds some spacing around the header */
