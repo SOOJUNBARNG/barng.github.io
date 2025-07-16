@@ -36,6 +36,7 @@ body {
 header.site-header {
   display: flex; /* Use Flexbox for alignment */
   justify-content: flex-start; /*Pushes children to opposite ends */
+  gap: 50px; /* Space between the left and right sections */
   align-items: center; /* Vertically aligns children in the middle */
   padding: 20px 30px; /* Adds some spacing around the header */
   width: 100%;
