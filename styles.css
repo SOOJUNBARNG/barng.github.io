@@ -205,7 +205,7 @@ footer {
   header.site-header .main-nav ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* This creates the 2 columns */
-    width: 100%;
+    width: 50%;
     gap: 15px; /* Adjusts space between rows and columns */
     
     /* These lines are for cleanup */
