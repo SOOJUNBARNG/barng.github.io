@@ -26,7 +26,15 @@ const languageData = {
         work_history: "Work History",
         experience: "Experiences",
         references: "References",
-        others: "Others"
+        others: "Others",
+        // SKILL PAGE
+        skillsTitle: "Skills & Expertise",
+        dataScienceTitle: "Data Science & Machine Learning",
+        appDevTitle: "Application & Web Development",
+        cloudDbTitle: "Cloud & Database Management",
+        biAnalyticsTitle: "Business Intelligence & Analytics",
+        domainKnowledgeTitle: "Domain Knowledge"
+        // 
     },
     jp: {
         resumeTitle: "履歴書",
@@ -52,7 +60,15 @@ const languageData = {
         work_history: "履歴",
         experience: "職務経験",
         references: "参考文献",
-        others: "その他"
+        others: "その他",
+        // SKILL PAGE
+        skillsTitle: "スキルと専門知識",
+        dataScienceTitle: "データサイエンスと機械学習",
+        appDevTitle: "アプリ・Web開発",
+        cloudDbTitle: "クラウドとデータベース管理",
+        biAnalyticsTitle: "BIとデータ分析",
+        domainKnowledgeTitle: "ドメイン知識"
+
     },
     kr: {
         resumeTitle: "이력서",
@@ -78,7 +94,14 @@ const languageData = {
         work_history: "이력",
         experience: "직무경험",
         references: "기타활동",
-        others: "기타"
+        others: "기타",
+        // SKILL PAGE
+        skillsTitle: "기술 및 전문 지식",
+        dataScienceTitle: "데이터 과학 및 머신러닝",
+        appDevTitle: "어플리케이션 및 웹 개발",
+        cloudDbTitle: "클라우드 및 데이터베이스 관리",
+        biAnalyticsTitle: "BI 및 분석",
+        domainKnowledgeTitle: "전문 분야 지식"
     }
 };
 
@@ -119,6 +142,13 @@ function changeLanguage(lang) {
     setList('intro-text', languageData[lang].introText);
     setList('education-text', languageData[lang].educationText);
     
+    // ✨ NEW: Update skills page content
+    setText('skills-title', languageData[lang].skillsTitle);
+    setText('data-science-title', languageData[lang].dataScienceTitle);
+    setText('app-dev-title', languageData[lang].appDevTitle);
+    setText('cloud-db-title', languageData[lang].cloudDbTitle);
+    setText('bi-analytics-title', languageData[lang].biAnalyticsTitle);
+    setText('domain-knowledge-title', languageData[lang].domainKnowledgeTitle);
     // You can add more IDs here for your other pages
     // For example, for skill.html:
     // setText('technical-skills-title', languageData[lang].technicalSkills);
