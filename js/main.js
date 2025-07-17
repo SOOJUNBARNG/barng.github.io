@@ -23,8 +23,8 @@ const languageData = {
         home: "Home",
         education: "Education",
         skills: "Skills",
-        experience: "Experiences",
-        projects: "Projects",
+        experience: "Work History",
+        projects: "Experiences",
         references: "References",
         others: "Others"
     },
@@ -49,8 +49,8 @@ const languageData = {
         home: "ホーム",
         education: "学歴",
         skills: "スキル",
-        experience: "職歴",
-        projects: "プロジェクト",
+        experience: "履歴",
+        projects: "職務経験",
         references: "参考文献",
         others: "その他"
     },
@@ -75,8 +75,8 @@ const languageData = {
         home: "홈",
         education: "학력",
         skills: "스킬",
-        experience: "직무경험",
-        projects: "프로젝트",
+        experience: "이력",
+        projects: "직무경험",
         references: "기타활동",
         others: "기타"
     }
