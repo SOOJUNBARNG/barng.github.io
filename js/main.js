@@ -23,8 +23,8 @@ const languageData = {
         home: "Home",
         education: "Education",
         skills: "Skills",
-        experience: "Work History",
-        projects: "Experiences",
+        work_history: "Work History",
+        experience: "Experiences",
         references: "References",
         others: "Others"
     },
@@ -49,8 +49,8 @@ const languageData = {
         home: "ホーム",
         education: "学歴",
         skills: "スキル",
-        experience: "履歴",
-        projects: "職務経験",
+        work_history: "履歴",
+        experience: "職務経験",
         references: "参考文献",
         others: "その他"
     },
@@ -75,8 +75,8 @@ const languageData = {
         home: "홈",
         education: "학력",
         skills: "스킬",
-        experience: "이력",
-        projects: "직무경험",
+        work_history: "이력",
+        experience: "직무경험",
         references: "기타활동",
         others: "기타"
     }
@@ -107,8 +107,8 @@ function changeLanguage(lang) {
     setText('home-link', languageData[lang].home);
     setText('education-link', languageData[lang].education);
     setText('skills-link', languageData[lang].skills);
+    setText('work-history-link', languageData[lang].work_history);
     setText('experience-link', languageData[lang].experience);
-    setText('projects-link', languageData[lang].projects);
     setText('references-link', languageData[lang].references);
     setText('others-link', languageData[lang].others);
 
