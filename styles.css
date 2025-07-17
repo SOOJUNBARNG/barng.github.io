@@ -166,7 +166,6 @@ ul li a:hover {
 }
 
 /* --- SKILLS SECTION STYLES --- */
-
 .skills-grid {
   display: grid;
   /* Create responsive columns: they'll wrap automatically on smaller screens */
@@ -231,6 +230,76 @@ ul li a:hover {
   border-radius: 20px; /* Creates the "pill" shape */
   font-size: 0.9em;
   font-weight: bold;
+}
+
+/* --- EDUCATION TIMELINE STYLES --- */
+
+.education-timeline {
+  margin-top: 30px;
+}
+
+.education-entry {
+  position: relative; /* Required for the timeline pseudo-elements */
+  padding-left: 30px; /* Make space for the timeline line and dot */
+  margin-bottom: 40px; /* Space between each entry */
+}
+
+/* The vertical timeline line */
+.education-entry::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  bottom: -25px; /* Extends the line down to the next entry */
+  width: 2px;
+  background-color: #e0e0e0; 
+}
+
+/* The timeline dot */
+.education-entry::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 6px;
+  height: 12px;
+  width: 12px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  z-index: 1; /* Ensures the dot is on top of the line */
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+
+.education-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: var(--primary-color);
+}
+
+.date-range {
+  font-size: 0.9em;
+  color: #777;
+  font-weight: bold;
+  flex-shrink: 0; /* Prevents the date from wrapping */
+  margin-left: 15px;
+}
+
+.education-body {
+  padding-left: 2px;
+}
+
+.degree-title, .location-title {
+  margin: 0 0 10px 0;
+  font-style: italic;
+}
+
+.education-body ul {
+  margin: 0;
 }
 
 /* ---- FOOTER ---- */
