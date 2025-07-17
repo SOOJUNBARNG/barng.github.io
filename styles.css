@@ -176,42 +176,59 @@ footer {
 }
 
 /* ---- RESPONSIVE DESIGN ---- */
+/* ---- BETTER RESPONSIVE DESIGN FOR MOBILE 📱---- */
 @media (max-width: 768px) {
+  /* Make the main content area use more screen width */
   .container {
     padding: 15px;
   }
 
-  header {
-    padding: 30px 15px;
+  /* --- HEADER STYLING FOR MOBILE --- */
+  
+  /* 1. Stack the main header sections (left and nav) vertically */
+  header.site-header {
+    flex-direction: column; /* This is the key change */
+    gap: 30px; /* Increase space between the top section and the nav links */
+    padding: 20px 15px;
   }
 
-  #resume-title {
-    font-size: 2em;
+  /* Adjust profile pic size for mobile */
+  header.site-header .profile-pic {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0; /* Remove margin since we now use 'gap' */
   }
 
-  #language-switcher {
-    position: static;
-    /* Let it flow in the document */
-    margin: 20px auto 0;
-    display: block;
+  /* --- NAVIGATION LINK STYLING FOR MOBILE --- */
+
+  /* 2. Make the navigation list stack vertically */
+  header.site-header .main-nav ul {
+    display: flex;
+    flex-direction: column; /* Stack nav links vertically */
+    align-items: center;  /* Center the links */
+    width: 100%;
+    gap: 10px; /* Space between each link */
+  }
+  
+  /* 3. Make the links look like tappable buttons */
+  .main-nav a {
+    display: block; /* Make the whole area clickable */
+    width: 200px; /* Give the buttons a consistent width */
     text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 16px;
+    padding: 12px; /* Increase padding for easier tapping */
+    border-radius: 8px;
+    background-color: #f0f0f0; /* Add a subtle background color */
   }
 
-  .container {
-    padding: 10px;
+  /* Keep the hover effect for mobile (though it's mainly for tablets) */
+  .main-nav a:hover {
+      background-color: var(--secondary-color);
+      color: white;
   }
 
+
+  /* --- GENERAL CONTENT FONT SIZE ADJUSTMENTS --- */
   h2 {
-    font-size: 1.5em;
-  }
-
-  section {
-    padding: 20px;
+    font-size: 1.6em;
   }
 }
