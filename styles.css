@@ -203,11 +203,15 @@ footer {
 
   /* 2. Make the navigation list stack vertically */
   header.site-header .main-nav ul {
-    display: flex;
-    flex-direction: column; /* Stack nav links vertically */
-    align-items: center;  /* Center the links */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* This creates the 2 columns */
     width: 100%;
-    gap: 10px; /* Space between each link */
+    gap: 15px; /* Adjusts space between rows and columns */
+    
+    /* These lines are for cleanup */
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   
   /* 3. Make the links look like tappable buttons */
