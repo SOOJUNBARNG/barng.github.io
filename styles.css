@@ -175,6 +175,61 @@ footer {
   font-size: 0.9em;
 }
 
+/* --- FOLDABLE SECTION STYLES --- */
+
+/* Style for the clickable header */
+.foldable-header {
+  cursor: pointer; /* Changes the mouse to a pointer on hover */
+  display: flex;
+  justify-content: space-between; /* Puts the title and icon on opposite ends */
+  align-items: center;
+  padding: 15px;
+  background-color: #f0f3f5;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.foldable-header:hover {
+  background-color: #e1e8ed; /* A slightly darker color on hover */
+}
+
+/* Creates the '+' icon on the right side */
+.foldable-header::after {
+  content: '+'; /* The '+' symbol */
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--secondary-color);
+  transition: transform 0.3s ease-in-out; /* Smoothly animates the icon */
+}
+
+/* Style for the content area that will be hidden/shown */
+.foldable-content {
+  /* The max-height trick for smooth animation */
+  max-height: 0;
+  overflow: hidden; /* Hides the content when collapsed */
+  transition: max-height 0.4s ease-in-out;
+  padding: 0 20px; /* Adds some horizontal padding when open */
+  border-left: 3px solid var(--secondary-color);
+  margin-left: 15px;
+}
+
+
+/* --- STYLES FOR THE "OPEN" STATE --- */
+
+/* When the header has the .is-open class, rotate the icon */
+.foldable-header.is-open::after {
+  content: '−'; /* Changes the icon to a minus sign */
+  transform: rotate(180deg);
+}
+
+/* When the header has the .is-open class, reveal the content */
+.foldable-header.is-open + .foldable-content {
+  /* Set a max-height large enough to fit your content */
+  max-height: 2000px; /* Adjust if your content is very long */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 /* ---- RESPONSIVE DESIGN ---- */
 /* ---- BETTER RESPONSIVE DESIGN FOR MOBILE 📱---- */
 @media (max-width: 768px) {
@@ -205,7 +260,7 @@ footer {
   header.site-header .main-nav ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* This creates the 2 columns */
-    width: 70%;
+    width: 50%;
     gap: 15px; /* Adjusts space between rows and columns */
     
     /* These lines are for cleanup */

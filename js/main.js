@@ -140,12 +140,31 @@ function initializeLanguage() {
     });
 }
 
-// 4. This is the main logic that loads the header and switcher.
-// It will run on every page that includes this script.
-document.addEventListener('DOMContentLoaded', () => {
-    // First, check if the header placeholder exists.
-    if (!document.getElementById('header-placeholder')) return;
+// ✨ NEW ✨
+// 4. This function initializes the foldable sections.
+function initializeFoldableSections() {
+    const foldableHeaders = document.querySelectorAll('.foldable-header');
+    foldableHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            header.classList.toggle('is-open');
+            const content = header.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    });
+}
 
+// 5. This is the main logic that runs when the page is loaded.
+document.addEventListener('DOMContentLoaded', () => {
+    // ✨ CHANGED ✨
+    // Initialize both features as soon as the page is ready.
+    initializeFoldableSections();
+
+    // The existing header-loading logic
+    if (!document.getElementById('header-placeholder')) return;
     fetch('/barng.github.io/asset/header.html')
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
@@ -164,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (container) {
                 container.innerHTML = switcherHtml;
             }
+            // Initialize language switcher after it has been loaded
             initializeLanguage();
         })
         .catch(error => console.error('Error loading page assets:', error));
