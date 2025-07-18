@@ -61,7 +61,17 @@ const languageData = {
         refPaizaTitle: "Paiza Skill Check",
         refPaizaDesc: "[Rank S]Achieved the highest rank (S) in the Paiza programming skill check, demonstrating foundational knowledge in Python.",
         refKaggleTitle: "Kaggle Competitions [In Progress]",
-        refKaggleDesc: "Actively participating in Kaggle competitions to apply and enhance data science skills."
+        refKaggleDesc: "Actively participating in Kaggle competitions to apply and enhance data science skills.",
+        // Others Page Data
+        othersTitle: "Other Activities",
+        programmingStudiesTitle: "Programming Studies",
+        sideJobs: [
+            { title: "Hirevue - Korean Market", details: ["Sales and business development for the Korean market."] },
+            { title: "Hotel Staffing & Management Support", details: ["Dispatching personnel from Indonesia and India.", "Created a cleaning management application (private)."] },
+            { title: "Hobby Drones", details: ["Managed production in China and sales in Japan."] },
+            { title: "500 Yen Ties", details: ["Produced ties in China for sale in Japan."] },
+            { title: "Sukajan Jacket Sales", details: ["Sold Japanese 'Sukajan' jackets in Korea, capitalizing on a trend from the K-pop group BIGBANG."] }
+        ]
 
     },
     jp: {
@@ -123,7 +133,18 @@ const languageData = {
         refPaizaTitle: "パイザ・スキルチェック",
         refPaizaDesc: "[Rank S]Paizaプログラミングスキルチェックで最高ランクのSランクを取得し、Pythonの基礎知識を証明しました。",
         refKaggleTitle: "Kaggle【挑戦中】",
-        refKaggleDesc: "データサイエンスのスキルを応用・向上させるため、Kaggleコンペティションに積極的に参加しています。"
+        refKaggleDesc: "データサイエンスのスキルを応用・向上させるため、Kaggleコンペティションに積極的に参加しています。",
+        // Others Page Data
+        othersTitle: "副業・その他活動",
+        programmingStudiesTitle: "プログラミング勉強",
+        // ✨ NEW: Data for the "Others" page cards (Japanese)
+        sideJobs: [
+            { title: "Hirevue韓国マーケット", details: ["韓国市場向けの営業を担当。"] },
+            { title: "ホテル人材派遣・運営補助", details: ["インドネシア・インドからの人材派遣。", "掃除管理アプリの作成（公開不可）。"] },
+            { title: "趣味用ドローン", details: ["中国での生産管理と日本での販売を担当。"] },
+            { title: "５００円ネクタイ", details: ["中国でネクタイを生産し、日本で販売。"] },
+            { title: "スカジャン販売", details: ["アイドルグループBIGBANGをきっかけに韓国で人気だった日本のスカジャンを販売。"] }
+        ]
     },
     kr: {
         resumeTitle: "이력서",
@@ -184,7 +205,18 @@ const languageData = {
         refPaizaTitle: "Paiza 스킬 체크",
         refPaizaDesc: "[S랭크]Paiza 프로그래밍 스킬 체크에서 최고 등급인 S랭크를 취득하여 파이썬 기초 지식을 증명했습니다.",
         refKaggleTitle: "Kaggle [도전 중]",
-        refKaggleDesc: "데이터 과학 기술을 적용하고 향상시키기 위해 Kaggle 대회에 적극적으로 참여하고 있습니다."
+        refKaggleDesc: "데이터 과학 기술을 적용하고 향상시키기 위해 Kaggle 대회에 적극적으로 참여하고 있습니다.",
+        // Others Page Data
+        othersTitle: "부업 및 기타 활동",
+        programmingStudiesTitle: "프로그래밍 공부",
+        // ✨ NEW: Data for the "Others" page cards (Korean)
+        sideJobs: [
+            { title: "Hirevue 한국 시장", details: ["한국 시장 영업 담당."] },
+            { title: "호텔 인재 파견 및 운영 보조", details: ["인도네시아, 인도 인재 파견.", "청소 관리 앱 제작 (비공개)."] },
+            { title: "취미용 드론", details: ["중국 생산 및 일본 판매 관리."] },
+            { title: "500엔 넥타이", details: ["중국에서 넥타이를 생산하여 일본에서 판매."] },
+            { title: "스카잔 판매", details: ["아이돌 그룹 BIGBANG을 계기로 한국에서 인기를 끈 일본 스카잔을 판매."] }
+        ]
     }
 };
 
@@ -225,6 +257,29 @@ function renderTimeline(lang, dataType, containerSelector, pageTitleId) {
             </div>`;
     });
     timelineContainer.innerHTML = htmlContent;
+}
+
+function renderSideJobs(lang) {
+    const gridContainer = document.querySelector('.skills-grid');
+    // Only run this function on the "Others" page
+    if (!gridContainer || !document.getElementById('others-title')) return;
+
+    const entries = languageData[lang].sideJobs;
+    if (!entries) return;
+    let htmlContent = '';
+
+    entries.forEach(entry => {
+        const detailsHtml = entry.details.map(detail => `<li>${detail}</li>`).join('');
+        htmlContent += `
+            <div class="skill-category">
+                <h3>${entry.title}</h3>
+                <ul>
+                    ${detailsHtml}
+                </ul>
+            </div>
+        `;
+    });
+    gridContainer.innerHTML = htmlContent;
 }
 
 // 2. This function now updates any element that exists on the current page.
@@ -279,6 +334,8 @@ function changeLanguage(lang) {
     setText('experience-title', languageData[lang].experienceTitle);
     setText('skills-title', languageData[lang].skillsTitle);
     setText('references-title', languageData[lang].referencesTitle); // ✨ NEW
+    setText('others-title', languageData[lang].othersTitle); // ✨ NEW
+    setText('programming-studies-title', languageData[lang].programmingStudiesTitle); // ✨ NEW
 
     // Update References Page Content
     setText('ref-book-title', languageData[lang].refBookTitle);     // ✨ NEW
@@ -293,6 +350,7 @@ function changeLanguage(lang) {
     // ✨ Bid
     renderTimeline(lang, 'educationTimeline', '.timeline', 'education-title');
     renderTimeline(lang, 'workHistoryTimeline', '.timeline', 'work-history-title');
+    renderSideJobs(lang);
 }
 
 
