@@ -43,6 +43,7 @@ const languageData = {
             { institution: "Taroona High School", date: "2006.03 – 2008.07", degree: null, major: "Tasmania, Australia", details: [] }
         ],
         // ✨ NEW: Work History Timeline Data
+        workHistoryTitle: "Work History",
         workHistoryTimeline: [
             { company: "Tokiwa Health Care [JPIX]", date: "2025.08 – Present", title: "Data Scientist", department: "Value Up Team", details: ["Served as a data scientist for the private equity team."] },
             { company: "Medical frontier", date: "2024.08 – 2025.07", title: "Data Scientist", department: "Corporate Development Department", details: ["Served as a data scientist for the corporate department in general."] },
@@ -93,6 +94,7 @@ const languageData = {
             { institution: "タルーナ高等学校", date: "2006.03 – 2008.07", degree: null, major: "オーストラリア、タスマニア", details: [] }
         ],
         // Work History Timeline
+        workHistoryTitle: "職務経歴",
         workHistoryTimeline: [
             { company: "株式会社常盤植物化学研究所 [JPIX]", date: "2025.08 – 現在", title: "データサイエンティスト", department: "バリューアップチーム", details: ["プライベートエクイティチームのデータサイエンティストとして従事。"] },
             { company: "メディカルフロンティア", date: "2024.08 – 2025.07", title: "データサイエンティスト", department: "経営企画部", details: ["経営企画部にてデータサイエンティストとして従事。"] },
@@ -143,6 +145,7 @@ const languageData = {
             { institution: "타루나 고등학교", date: "2006.03 – 2008.07", degree: null, major: "호주, 타즈매니아", details: [] }
         ],
         // Work History Timeline
+        workHistoryTitle: "職務経歴",
         workHistoryTimeline: [
             { company: "도키와 헬스케어 [JPIX]", date: "2025.08 – 현재", title: "데이터 과학자", department: "밸류 업 팀", details: ["사모펀드 팀의 데이터 과학자로 근무 중."] },
             { company: "메디컬 프론티어", date: "2024.08 – 2025.07", title: "데이터 과학자", department: "기업 개발 부서", details: ["기업 부서에서 데이터 과학자로 근무 중."] },
