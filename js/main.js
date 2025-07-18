@@ -197,12 +197,52 @@ const languageData = {
         // Work History Timeline
         workHistoryTitle: "職務経歴",
         workHistoryTimeline: [
-            { company: "도키와 헬스케어 [JPIX]", date: "2025.08 – 현재", title: "데이터 과학자", department: "밸류 업 팀", details: ["사모펀드 팀의 데이터 과학자로 근무 중."] },
-            { company: "메디컬 프론티어", date: "2024.08 – 2025.07", title: "데이터 과학자", department: "기업 개발 부서", details: ["기업 부서에서 데이터 과학자로 근무 중."] },
-            { company: "Caddi", date: "2022.10 – 2024.07", title: "팀 리더(2D)", department: "데이터 팀", details: ["견적 솔루션 및 클라우드 환경 유지 관리 및 운영 담당."] },
-            { company: "아스타뮤제", date: "2022.04 – 2022.09", title: "헤지 펀드 컨설턴트", department: "데이터 팀", details: ["특허 데이터를 분석하여 주가 상승이 예상되는 종목을 식별."] },
-            { company: "KPMG FAS", date: "2020.04 – 2022.03", title: "M&A 컨설턴트", department: "디지털 팀", details: ["M&A에서 영업권 계산 및 기타 여러 PMI 프로젝트에 참여."] },
-            { company: "미스미 주식회사", date: "2019.04 – 2020.03", title: "물류 IT 시스템 담당", department: "신입 사원", details: ["물류 및 항만 시스템을 위한 SQL 쿼리 작성 및 관리."] }
+            { company: "도키와 헬스케어 [JPIX]", date: "2025.08 – 현재", title: "데이터 과학자", department: "밸류 업 팀", details: ["사모펀드 팀의 데이터 과학자로 근무 중."],
+                projects: [
+                    { name: "インフラ周り", projectdetails: ["TableauServerのAWS設定", "AWSのIAMTerraform設定", "財務周り新規DB設計（店舗家賃関連データ）"] },
+                    { name: "CK・COのシフト自動作成", projectdetails: ["需要・勤務日数・休暇に合わせて営業社員の全国配置。"] },
+                    { name: "営業社員のお客様自動振り分け", projectdetails: ["過去データを利用したランダムフォーレスト分析。"] },
+                    { name: "RAG開発【社内専用CHATGPT作成】", projectdetails: ["スプレッドシートデータをベースとした、社内データ共有。"] }
+                ] 
+            },
+            { company: "메디컬 프론티어", date: "2024.08 – 2025.07", title: "데이터 과학자", department: "기업 개발 부서", details: ["기업 부서에서 데이터 과학자로 근무 중."],
+                projects: [
+                    { name: "インフラ周り", projectdetails: ["TableauServerのAWS設定", "AWSのIAMTerraform設定", "財務周り新規DB設計（店舗家賃関連データ）"] },
+                    { name: "CK・COのシフト自動作成", projectdetails: ["需要・勤務日数・休暇に合わせて営業社員の全国配置。"] },
+                    { name: "営業社員のお客様自動振り分け", projectdetails: ["過去データを利用したランダムフォーレスト分析。"] },
+                    { name: "RAG開発【社内専用CHATGPT作成】", projectdetails: ["スプレッドシートデータをベースとした、社内データ共有。"] }
+                ] 
+            },
+            { company: "Caddi", date: "2022.10 – 2024.07", title: "팀 리더(2D)", department: "데이터 팀", details: ["견적 솔루션 및 클라우드 환경 유지 관리 및 운영 담당."], 
+                projects: [
+                    { name: "インフラ周り", projectdetails: ["TableauServerのAWS設定", "AWSのIAMTerraform設定", "財務周り新規DB設計（店舗家賃関連データ）"] },
+                    { name: "CK・COのシフト自動作成", projectdetails: ["需要・勤務日数・休暇に合わせて営業社員の全国配置。"] },
+                    { name: "営業社員のお客様自動振り分け", projectdetails: ["過去データを利用したランダムフォーレスト分析。"] },
+                    { name: "RAG開発【社内専用CHATGPT作成】", projectdetails: ["スプレッドシートデータをベースとした、社内データ共有。"] }
+                ] 
+            },
+            { company: "아스타뮤제", date: "2022.04 – 2022.09", title: "헤지 펀드 컨설턴트", department: "데이터 팀", details: ["특허 데이터를 분석하여 주가 상승이 예상되는 종목을 식별."],
+                projects: [
+                    { name: "インフラ周り", projectdetails: ["TableauServerのAWS設定", "AWSのIAMTerraform設定", "財務周り新規DB設計（店舗家賃関連データ）"] },
+                    { name: "CK・COのシフト自動作成", projectdetails: ["需要・勤務日数・休暇に合わせて営業社員の全国配置。"] },
+                    { name: "営業社員のお客様自動振り分け", projectdetails: ["過去データを利用したランダムフォーレスト分析。"] },
+                    { name: "RAG開発【社内専用CHATGPT作成】", projectdetails: ["スプレッドシートデータをベースとした、社内データ共有。"] }
+                ] 
+            },
+            { company: "KPMG FAS", date: "2020.04 – 2022.03", title: "M&A 컨설턴트", department: "디지털 팀", details: ["M&A에서 영업권 계산 및 기타 여러 PMI 프로젝트에 참여."], 
+                projects: [
+                    { name: "インフラ周り", projectdetails: ["TableauServerのAWS設定", "AWSのIAMTerraform設定", "財務周り新規DB設計（店舗家賃関連データ）"] },
+                    { name: "CK・COのシフト自動作成", projectdetails: ["需要・勤務日数・休暇に合わせて営業社員の全国配置。"] },
+                    { name: "営業社員のお客様自動振り分け", projectdetails: ["過去データを利用したランダムフォーレスト分析。"] },
+                    { name: "RAG開発【社内専用CHATGPT作成】", projectdetails: ["スプレッドシートデータをベースとした、社内データ共有。"] }
+                ] 
+            },
+            { company: "미스미 주식회사", date: "2019.04 – 2020.03", title: "물류 IT 시스템 담당", department: "신입 사원", details: ["물류 및 항만 시스템을 위한 SQL 쿼리 작성 및 관리."], 
+                projects: [
+                    { name: "Naver marketing", projectdetails: ["Pythonを使い、プラットフォーム上の特定サイトへのアクセスを自動化。"] },
+                    { name: "Financial data analysis", projectdetails: ["在庫データや特許データを利用した分析をメインに担当。"] }
+                ] 
+            }
         ],
         // References Page Data
         referencesTitle: "출판물 및 참고 자료",
@@ -245,6 +285,24 @@ function renderTimeline(lang, dataType, containerSelector, pageTitleId) {
     entries.forEach(entry => {
         const detailsHtml = entry.details.map(detail => `<li>${detail}</li>`).join('');
         let primaryTitle, secondaryTitle;
+
+        // Build the foldable project details HTML if it exists
+        let projectsHtml = '';
+        if (entry.projects && entry.projects.length > 0) {
+            projectsHtml += '<div class="timeline-projects">';
+            entry.projects.forEach(project => {
+                const projectDetailsHtml = project.projectdetails.map(detail => `<li>${projectdetails}</li>`).join('');
+                projectsHtml += `
+                    <div class="foldable-project">
+                        <h4 class="foldable-header">${project.name}</h4>
+                        <div class="foldable-content">
+                            <ul>${projectDetailsHtml}</ul>
+                        </div>
+                    </div>
+                `;
+            });
+            projectsHtml += '</div>';
+        }
 
         if (dataType === 'educationTimeline') {
             primaryTitle = entry.institution;
