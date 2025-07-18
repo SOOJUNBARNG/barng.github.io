@@ -184,7 +184,7 @@ ul li a:hover {
   /* ✨ ADD THESE THREE LINES ✨ */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: top;
 }
 
 .skill-category:hover {
