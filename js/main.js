@@ -33,8 +33,15 @@ const languageData = {
         appDevTitle: "Application & Web Development",
         cloudDbTitle: "Cloud & Database Management",
         biAnalyticsTitle: "Business Intelligence & Analytics",
-        domainKnowledgeTitle: "Domain Knowledge"
-        // 
+        corporateTitle: "Finance and General Corporate Skills",
+        domainKnowledgeTitle: "Domain Knowledge",
+        // Education Timeline
+        educationTimeline: [
+            { institution: "Tokyo Institute of Technology", date: "2016.04 – 2019.03", degree: "Master of Engineering & Science", major: "Nuclear Engineering", details: ["Recipient of the MEXT National Scholarship"] },
+            { institution: "Tokyo Institute of Technology", date: "2012.04 – 2016.03", degree: "Bachelor of Engineering", major: "Mechanical Engineering", details: ["Recipient of the MEXT National Scholarship"] },
+            { institution: "Banpo High School", date: "2008.08 – 2010.02", degree: null, major: "Seoul, South Korea", details: [] },
+            { institution: "Taroona High School", date: "2006.03 – 2008.07", degree: null, major: "Tasmania, Australia", details: [] }
+        ]
     },
     jp: {
         resumeTitle: "履歴書",
@@ -67,8 +74,15 @@ const languageData = {
         appDevTitle: "アプリ・Web開発",
         cloudDbTitle: "クラウドとデータベース管理",
         biAnalyticsTitle: "BIとデータ分析",
-        domainKnowledgeTitle: "ドメイン知識"
-
+        corporateTitle: "経営管理関連スキル",
+        domainKnowledgeTitle: "ドメイン知識",
+        // Education Timeline
+        educationTimeline: [
+            { institution: "東京工業大学", date: "2016.04 – 2019.03", degree: "工学・理学修士", major: "原子力工学", details: ["国費外国人留学生奨学金 受給"] },
+            { institution: "東京工業大学", date: "2012.04 – 2016.03", degree: "工学学士", major: "機械工学", details: ["国費外国人留学生奨学金 受給"] },
+            { institution: "盤浦高等学校", date: "2008.08 – 2010.02", degree: null, major: "大韓民国、ソウル", details: [] },
+            { institution: "タルーナ高等学校", date: "2006.03 – 2008.07", degree: null, major: "オーストラリア、タスマニア", details: [] }
+        ]
     },
     kr: {
         resumeTitle: "이력서",
@@ -101,8 +115,47 @@ const languageData = {
         appDevTitle: "어플리케이션 및 웹 개발",
         cloudDbTitle: "클라우드 및 데이터베이스 관리",
         biAnalyticsTitle: "BI 및 분석",
-        domainKnowledgeTitle: "전문 분야 지식"
+        corporateTitle: "경영관리 지식",
+        domainKnowledgeTitle: "전문 분야 지식",
+        // Education Timeline
+        educationTimeline: [
+            { institution: "도쿄 공업대학", date: "2016.04 – 2019.03", degree: "공학・이학 석사", major: "원자력공학", details: ["국비외국인유학생 장학금 수혜"] },
+            { institution: "도쿄 공업대학", date: "2012.04 – 2016.03", degree: "공학 학사", major: "기계공학", details: ["국비외국인유학생 장학금 수혜"] },
+            { institution: "반포고등학교", date: "2008.08 – 2010.02", degree: null, major: "대한민국, 서울", details: [] },
+            { institution: "타루나 고등학교", date: "2006.03 – 2008.07", degree: null, major: "호주, 타즈매니아", details: [] }
+        ]
     }
+};
+
+function renderEducationTimeline(lang) {
+    const timelineContainer = document.querySelector('.education-timeline');
+    if (!timelineContainer) return; 
+
+    // ✨ CHANGED: Access the timeline data from languageData[lang] ✨
+    const entries = languageData[lang].educationTimeline;
+    let htmlContent = '';
+
+    entries.forEach(entry => {
+        const detailsHtml = entry.details.map(detail => `<li>${detail}</li>`).join('');
+        const degreeHtml = entry.degree 
+            ? `<p class="degree-title"><strong>${entry.degree},</strong> ${entry.major}</p>`
+            : `<p class="location-title">${entry.major}</p>`;
+
+        htmlContent += `
+            <div class="education-entry">
+                <div class="education-header">
+                    <h3>${entry.institution}</h3>
+                    <span class="date-range">${entry.date}</span>
+                </div>
+                <div class="education-body">
+                    ${degreeHtml}
+                    ${detailsHtml ? `<ul>${detailsHtml}</ul>` : ''}
+                </div>
+            </div>
+        `;
+    });
+
+    timelineContainer.innerHTML = htmlContent;
 };
 
 // 2. This function now updates any element that exists on the current page.
@@ -148,11 +201,16 @@ function changeLanguage(lang) {
     setText('app-dev-title', languageData[lang].appDevTitle);
     setText('cloud-db-title', languageData[lang].cloudDbTitle);
     setText('bi-analytics-title', languageData[lang].biAnalyticsTitle);
+    setText('corporate-title', languageData[lang].corporateTitle);
     setText('domain-knowledge-title', languageData[lang].domainKnowledgeTitle);
+
     // You can add more IDs here for your other pages
+    setText('education-title', languageData[lang].educationTitle);
     // For example, for skill.html:
     // setText('technical-skills-title', languageData[lang].technicalSkills);
 }
+
+
 
 // 3. This function initializes the language switcher and sets the event listener.
 function initializeLanguage() {
