@@ -151,7 +151,7 @@ const languageData = {
         // Work History Timeline
         workHistoryTitle: "職務経歴",
         workHistoryTimeline: [
-            { company: "株式会社常盤植物化学研究所 [JPIX]", date: "2025.08 – 現在", title: "データサイエンティスト", department: "バリューアップチーム", details: ["プライベートエクイティチームのデータサイエンティストとして従事。"] },
+            { company: "ときわヘルスケア [JPIX]", date: "2025.08 – 現在", title: "データサイエンティスト", department: "バリューアップチーム", details: ["プライベートエクイティチームのデータサイエンティストとして従事。"] },
             { company: "メディカルフロンティア", date: "2024.08 – 2025.07", title: "データサイエンティスト", department: "経営企画部", details: ["経営企画部にてデータサイエンティストとして従事。"] },
             { company: "キャディ株式会社", date: "2022.10 – 2024.07", title: "チームリーダー(2D)", department: "データチーム", details: ["見積もりソリューションとクラウド環境の保守・運用を担当。"] },
             { company: "アスタミューゼ株式会社", date: "2022.04 – 2022.09", title: "ヘッジファンドコンサルタント", department: "データチーム", details: ["特許データを分析し、株価上昇が期待される銘柄を特定。"] },
