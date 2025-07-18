@@ -87,8 +87,8 @@ const languageData = {
         domainKnowledgeTitle: "ドメイン知識",
         // Education Timeline
         educationTimeline: [
-            { institution: "東京工業大学", date: "2016.04 – 2019.03", degree: "工学・理学修士", major: "原子力工学", details: ["国費外国人留学生奨学金 受給"] },
-            { institution: "東京工業大学", date: "2012.04 – 2016.03", degree: "工学学士", major: "機械工学", details: ["国費外国人留学生奨学金 受給"] },
+            { institution: "東京工業大学", date: "2016.04 – 2019.03", degree: "工学・理学修士", major: "　原子力工学", details: ["国費外国人留学生奨学金 受給"] },
+            { institution: "東京工業大学", date: "2012.04 – 2016.03", degree: "工学学士", major: "　機械工学", details: ["国費外国人留学生奨学金 受給"] },
             { institution: "盤浦高等学校", date: "2008.08 – 2010.02", degree: null, major: "大韓民国、ソウル", details: [] },
             { institution: "タルーナ高等学校", date: "2006.03 – 2008.07", degree: null, major: "オーストラリア、タスマニア", details: [] }
         ],
