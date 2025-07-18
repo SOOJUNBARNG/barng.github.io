@@ -180,6 +180,11 @@ ul li a:hover {
   border-radius: 8px;
   border: 1px solid #e0e0e0;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+  /* ✨ ADD THESE THREE LINES ✨ */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .skill-category:hover {

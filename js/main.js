@@ -51,7 +51,18 @@ const languageData = {
             { company: "Astamuse", date: "2022.04 – 2022.09", title: "Hedge Fund Consultant", department: "Data Team", details: ["Analyzed patent data to identify stocks with high growth potential."] },
             { company: "KPMG FAS", date: "2020.04 – 2022.03", title: "M&A Consultant", department: "Digital Team", details: ["Calculated goodwill at M&A and worked on several other PMI projects."] },
             { company: "Misumi Corp", date: "2019.04 – 2020.03", title: "Logistic IT System", department: "New Graduate Position", details: ["Wrote and managed SQL queries for logistics and port systems."] }
-        ]
+        ],
+        // References Page Data
+        referencesTitle: "Publications & References",
+        refBookTitle: "Corporate Analysis & Job Hunting",
+        refBookDesc: "A book published on Amazon Kindle about job hunting strategies.",
+        refNikkeiTitle: "Nikkei Newspaper Summary",
+        refNikkeiDesc: "A personal project summarizing articles from the Nikkei newspaper.",
+        refPaizaTitle: "Paiza Skill Check [Rank S]",
+        refPaizaDesc: "Achieved the highest rank (S) in the Paiza programming skill check, demonstrating foundational knowledge in Python.",
+        refKaggleTitle: "Kaggle Competitions [In Progress]",
+        refKaggleDesc: "Actively participating in Kaggle competitions to apply and enhance data science skills."
+
     },
     jp: {
         resumeTitle: "履歴書",
@@ -102,7 +113,17 @@ const languageData = {
             { company: "アスタミューゼ株式会社", date: "2022.04 – 2022.09", title: "ヘッジファンドコンサルタント", department: "データチーム", details: ["特許データを分析し、株価上昇が期待される銘柄を特定。"] },
             { company: "KPMG FAS", date: "2020.04 – 2022.03", title: "M&Aコンサルタント", department: "デジタルチーム", details: ["M&Aにおけるのれんの算定、その他複数のPMIプロジェクトに従事。"] },
             { company: "株式会社ミスミ", date: "2019.04 – 2020.03", title: "物流ITシステム担当", department: "新卒", details: ["物流および港湾システムのためのSQLクエリを作成・管理。"] }
-        ]
+        ],
+        // References Page Data
+        referencesTitle: "出版物・参考文献",
+        refBookTitle: "企業分析＆就活",
+        refBookDesc: "就職活動戦略についてAmazon Kindleで出版した書籍です。",
+        refNikkeiTitle: "日経新聞要約",
+        refNikkeiDesc: "日本経済新聞の記事を要約する個人プロジェクトです。",
+        refPaizaTitle: "パイザ・スキルチェック【Sランク】",
+        refPaizaDesc: "Paizaプログラミングスキルチェックで最高ランクのSランクを取得し、Pythonの基礎知識を証明しました。",
+        refKaggleTitle: "Kaggle【挑戦中】",
+        refKaggleDesc: "データサイエンスのスキルを応用・向上させるため、Kaggleコンペティションに積極的に参加しています。"
     },
     kr: {
         resumeTitle: "이력서",
@@ -153,7 +174,17 @@ const languageData = {
             { company: "아스타뮤제", date: "2022.04 – 2022.09", title: "헤지 펀드 컨설턴트", department: "데이터 팀", details: ["특허 데이터를 분석하여 주가 상승이 예상되는 종목을 식별."] },
             { company: "KPMG FAS", date: "2020.04 – 2022.03", title: "M&A 컨설턴트", department: "디지털 팀", details: ["M&A에서 영업권 계산 및 기타 여러 PMI 프로젝트에 참여."] },
             { company: "미스미 주식회사", date: "2019.04 – 2020.03", title: "물류 IT 시스템 담당", department: "신입 사원", details: ["물류 및 항만 시스템을 위한 SQL 쿼리 작성 및 관리."] }
-        ]
+        ],
+        // References Page Data
+        referencesTitle: "출판물 및 참고 자료",
+        refBookTitle: "기업 분석 및 취업 활동",
+        refBookDesc: "취업 전략에 관해 아마존 킨들로 출판한 서적입니다.",
+        refNikkeiTitle: "닛케이 신문 요약",
+        refNikkeiDesc: "닛케이 신문 기사를 요약하는 개인 프로젝트입니다.",
+        refPaizaTitle: "Paiza 스킬 체크 [S랭크]",
+        refPaizaDesc: "Paiza 프로그래밍 스킬 체크에서 최고 등급인 S랭크를 취득하여 파이썬 기초 지식을 증명했습니다.",
+        refKaggleTitle: "Kaggle [도전 중]",
+        refKaggleDesc: "데이터 과학 기술을 적용하고 향상시키기 위해 Kaggle 대회에 적극적으로 참여하고 있습니다."
     }
 };
 
@@ -245,6 +276,19 @@ function changeLanguage(lang) {
     // You can add more IDs here for your other pages
     setText('education-title', languageData[lang].educationTitle);
     setText('work-history-title', languageData[lang].workHistoryTitle);
+    setText('experience-title', languageData[lang].experienceTitle);
+    setText('skills-title', languageData[lang].skillsTitle);
+    setText('references-title', languageData[lang].referencesTitle); // ✨ NEW
+
+    // Update References Page Content
+    setText('ref-book-title', languageData[lang].refBookTitle);     // ✨ NEW
+    setText('ref-book-desc', languageData[lang].refBookDesc);       // ✨ NEW
+    setText('ref-nikkei-title', languageData[lang].refNikkeiTitle);   // ✨ NEW
+    setText('ref-nikkei-desc', languageData[lang].refNikkeiDesc);     // ✨ NEW
+    setText('ref-paiza-title', languageData[lang].refPaizaTitle);     // ✨ NEW
+    setText('ref-paiza-desc', languageData[lang].refPaizaDesc);       // ✨ NEW
+    setText('ref-kaggle-title', languageData[lang].refKaggleTitle);   // ✨ NEW
+    setText('ref-kaggle-desc', languageData[lang].refKaggleDesc);     // ✨ NEW
 
     // ✨ Bid
     renderTimeline(lang, 'educationTimeline', '.timeline', 'education-title');
