@@ -65,13 +65,17 @@ const languageData = {
         // Others Page Data
         othersTitle: "Other Activities",
         programmingStudiesTitle: "Programming Studies",
-        sideJobs: [
-            { title: "Hirevue - Korean Market", details: ["Sales and business development for the Korean market."] },
-            { title: "Hotel Staffing & Management Support", details: ["Dispatching personnel from Indonesia and India.", "Created a cleaning management application (private)."] },
-            { title: "Hobby Drones", details: ["Managed production in China and sales in Japan."] },
-            { title: "500 Yen Ties", details: ["Produced ties in China for sale in Japan."] },
-            { title: "Sukajan Jacket Sales", details: ["Sold Japanese 'Sukajan' jackets in Korea, capitalizing on a trend from the K-pop group BIGBANG."] }
-        ]
+        sidejobHirevueTitle: "Hirevue - Korean Market",
+        sidejobHirevueDetail: "Sales and business development for the Korean market.",
+        sidejobHotelTitle: "Hotel Staffing & Management Support",
+        sidejobHotelDetail1: "Dispatching personnel from Indonesia and India.",
+        sidejobHotelDetail2: "Created a cleaning management application (private).",
+        sidejobDroneTitle: "Hobby Drones",
+        sidejobDroneDetail: "Managed production in China and sales control in Japan.",
+        sidejobTieTitle: "500 Yen Ties",
+        sidejobTieDetail: "Produced ties in China for sale in Japan.",
+        sidejobSukajanTitle: "Sukajan Jacket Sales",
+        sidejobSukajanDetail: "Sold Japanese 'Sukajan' jackets in Korea, capitalizing on a trend from the K-pop group BIGBANG."
 
     },
     jp: {
@@ -137,14 +141,18 @@ const languageData = {
         // Others Page Data
         othersTitle: "副業・その他活動",
         programmingStudiesTitle: "プログラミング勉強",
-        // ✨ NEW: Data for the "Others" page cards (Japanese)
-        sideJobs: [
-            { title: "Hirevue韓国マーケット", details: ["韓国市場向けの営業を担当。"] },
-            { title: "ホテル人材派遣・運営補助", details: ["インドネシア・インドからの人材派遣。", "掃除管理アプリの作成（公開不可）。"] },
-            { title: "趣味用ドローン", details: ["中国での生産管理と日本での販売を担当。"] },
-            { title: "５００円ネクタイ", details: ["中国でネクタイを生産し、日本で販売。"] },
-            { title: "スカジャン販売", details: ["アイドルグループBIGBANGをきっかけに韓国で人気だった日本のスカジャンを販売。"] }
-        ]
+        sidejobHirevueTitle: "Hirevue韓国マーケット",
+        sidejobHirevueDetail: "韓国市場向けの営業を担当。",
+        sidejobHotelTitle: "ホテル人材派遣・運営補助",
+        sidejobHotelDetail1: "インドネシア・インドからの人材派遣。",
+        sidejobHotelDetail2: "掃除管理アプリの作成（公開不可）。",
+        sidejobDroneTitle: "趣味用ドローン",
+        sidejobDroneDetail: "中国での生産管理と日本での販売を担当。",
+        sidejobTieTitle: "５００円ネクタイ",
+        sidejobTieDetail: "中国でネクタイを生産し、日本で販売。",
+        sidejobSukajanTitle: "スカジャン販売",
+        sidejobSukajanDetail: "アイドルグループBIGBANGをきっかけに韓国で人気だった日本のスカジャンを販売。"
+
     },
     kr: {
         resumeTitle: "이력서",
@@ -210,13 +218,17 @@ const languageData = {
         othersTitle: "부업 및 기타 활동",
         programmingStudiesTitle: "프로그래밍 공부",
         // ✨ NEW: Data for the "Others" page cards (Korean)
-        sideJobs: [
-            { title: "Hirevue 한국 시장", details: ["한국 시장 영업 담당."] },
-            { title: "호텔 인재 파견 및 운영 보조", details: ["인도네시아, 인도 인재 파견.", "청소 관리 앱 제작 (비공개)."] },
-            { title: "취미용 드론", details: ["중국 생산 및 일본 판매 관리."] },
-            { title: "500엔 넥타이", details: ["중국에서 넥타이를 생산하여 일본에서 판매."] },
-            { title: "스카잔 판매", details: ["아이돌 그룹 BIGBANG을 계기로 한국에서 인기를 끈 일본 스카잔을 판매."] }
-        ]
+        sidejobHirevueTitle: "Hirevue 한국 시장",
+        sidejobHirevueDetail: "한국 시장 영업 담당.",
+        sidejobHotelTitle: "호텔 인재 파견 및 운영 보조",
+        sidejobHotelDetail1: "인도네시아, 인도 인재 파견.",
+        sidejobHotelDetail2: "청소 관리 앱 제작 (비공개).",
+        sidejobDroneTitle: "취미용 드론",
+        sidejobDroneDetail: "중국 생산 및 일본 판매 관리.",
+        sidejobTieTitle: "500엔 넥타이",
+        sidejobTieDetail: "중국에서 넥타이를 생산하여 일본에서 판매.",
+        sidejobSukajanTitle: "스카잔 판매",
+        sidejobSukajanDetail: "아이돌 그룹 BIGBANG을 계기로 한국에서 인기를 끈 일본 스카잔을 판매."
     }
 };
 
@@ -259,28 +271,6 @@ function renderTimeline(lang, dataType, containerSelector, pageTitleId) {
     timelineContainer.innerHTML = htmlContent;
 }
 
-function renderSideJobs(lang) {
-    const gridContainer = document.querySelector('.skills-grid');
-    // Only run this function on the "Others" page
-    if (!gridContainer || !document.getElementById('others-title')) return;
-
-    const entries = languageData[lang].sideJobs;
-    if (!entries) return;
-    let htmlContent = '';
-
-    entries.forEach(entry => {
-        const detailsHtml = entry.details.map(detail => `<li>${detail}</li>`).join('');
-        htmlContent += `
-            <div class="skill-category">
-                <h3>${entry.title}</h3>
-                <ul>
-                    ${detailsHtml}
-                </ul>
-            </div>
-        `;
-    });
-    gridContainer.innerHTML = htmlContent;
-}
 
 // 2. This function now updates any element that exists on the current page.
 function changeLanguage(lang) {
@@ -347,10 +337,22 @@ function changeLanguage(lang) {
     setText('ref-kaggle-title', languageData[lang].refKaggleTitle);   // ✨ NEW
     setText('ref-kaggle-desc', languageData[lang].refKaggleDesc);     // ✨ NEW
 
+   // ✨ NEW: Update "Others" page static card content
+   setText('sidejob-hirevue-title', languageData[lang].sidejobHirevueTitle);
+   setText('sidejob-hirevue-detail', languageData[lang].sidejobHirevueDetail);
+   setText('sidejob-hotel-title', languageData[lang].sidejobHotelTitle);
+   setText('sidejob-hotel-detail1', languageData[lang].sidejobHotelDetail1);
+   setText('sidejob-hotel-detail2', languageData[lang].sidejobHotelDetail2);
+   setText('sidejob-drone-title', languageData[lang].sidejobDroneTitle);
+   setText('sidejob-drone-detail', languageData[lang].sidejobDroneDetail);
+   setText('sidejob-tie-title', languageData[lang].sidejobTieTitle);
+   setText('sidejob-tie-detail', languageData[lang].sidejobTieDetail);
+   setText('sidejob-sukajan-title', languageData[lang].sidejobSukajanTitle);
+   setText('sidejob-sukajan-detail', languageData[lang].sidejobSukajanDetail);
+
     // ✨ Bid
     renderTimeline(lang, 'educationTimeline', '.timeline', 'education-title');
     renderTimeline(lang, 'workHistoryTimeline', '.timeline', 'work-history-title');
-    renderSideJobs(lang);
 }
 
 
