@@ -206,6 +206,7 @@ function changeLanguage(lang) {
 
     // You can add more IDs here for your other pages
     setText('education-title', languageData[lang].educationTitle);
+    renderEducationTimeline(lang);
     // For example, for skill.html:
     // setText('technical-skills-title', languageData[lang].technicalSkills);
 }
