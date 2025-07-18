@@ -58,8 +58,8 @@ const languageData = {
         refBookDesc: "A book published on Amazon Kindle about job hunting strategies.",
         refNikkeiTitle: "Nikkei Newspaper Summary",
         refNikkeiDesc: "A personal project summarizing articles from the Nikkei newspaper.",
-        refPaizaTitle: "Paiza Skill Check [Rank S]",
-        refPaizaDesc: "Achieved the highest rank (S) in the Paiza programming skill check, demonstrating foundational knowledge in Python.",
+        refPaizaTitle: "Paiza Skill Check",
+        refPaizaDesc: "[Rank S]Achieved the highest rank (S) in the Paiza programming skill check, demonstrating foundational knowledge in Python.",
         refKaggleTitle: "Kaggle Competitions [In Progress]",
         refKaggleDesc: "Actively participating in Kaggle competitions to apply and enhance data science skills."
 
@@ -120,8 +120,8 @@ const languageData = {
         refBookDesc: "就職活動戦略についてAmazon Kindleで出版した書籍です。",
         refNikkeiTitle: "日経新聞要約",
         refNikkeiDesc: "日本経済新聞の記事を要約する個人プロジェクトです。",
-        refPaizaTitle: "パイザ・スキルチェック【Sランク】",
-        refPaizaDesc: "Paizaプログラミングスキルチェックで最高ランクのSランクを取得し、Pythonの基礎知識を証明しました。",
+        refPaizaTitle: "パイザ・スキルチェック",
+        refPaizaDesc: "[Rank S]Paizaプログラミングスキルチェックで最高ランクのSランクを取得し、Pythonの基礎知識を証明しました。",
         refKaggleTitle: "Kaggle【挑戦中】",
         refKaggleDesc: "データサイエンスのスキルを応用・向上させるため、Kaggleコンペティションに積極的に参加しています。"
     },
@@ -181,8 +181,8 @@ const languageData = {
         refBookDesc: "취업 전략에 관해 아마존 킨들로 출판한 서적입니다.",
         refNikkeiTitle: "닛케이 신문 요약",
         refNikkeiDesc: "닛케이 신문 기사를 요약하는 개인 프로젝트입니다.",
-        refPaizaTitle: "Paiza 스킬 체크 [S랭크]",
-        refPaizaDesc: "Paiza 프로그래밍 스킬 체크에서 최고 등급인 S랭크를 취득하여 파이썬 기초 지식을 증명했습니다.",
+        refPaizaTitle: "Paiza 스킬 체크",
+        refPaizaDesc: "[S랭크]Paiza 프로그래밍 스킬 체크에서 최고 등급인 S랭크를 취득하여 파이썬 기초 지식을 증명했습니다.",
         refKaggleTitle: "Kaggle [도전 중]",
         refKaggleDesc: "데이터 과학 기술을 적용하고 향상시키기 위해 Kaggle 대회에 적극적으로 참여하고 있습니다."
     }
