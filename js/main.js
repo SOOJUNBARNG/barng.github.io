@@ -41,6 +41,15 @@ const languageData = {
             { institution: "Tokyo Institute of Technology", date: "2012.04 – 2016.03", degree: "Bachelor of Engineering", major: "Mechanical Engineering", details: ["Recipient of the MEXT National Scholarship"] },
             { institution: "Banpo High School", date: "2008.08 – 2010.02", degree: null, major: "Seoul, South Korea", details: [] },
             { institution: "Taroona High School", date: "2006.03 – 2008.07", degree: null, major: "Tasmania, Australia", details: [] }
+        ],
+        // ✨ NEW: Work History Timeline Data
+        workHistoryTimeline: [
+            { company: "Tokiwa Health Care [JPIX]", date: "2025.08 – Present", title: "Data Scientist", department: "Value Up Team", details: ["Served as a data scientist for the private equity team."] },
+            { company: "Medical frontier", date: "2024.08 – 2025.07", title: "Data Scientist", department: "Corporate Development Department", details: ["Served as a data scientist for the corporate department in general."] },
+            { company: "Caddi", date: "2022.10 – 2024.07", title: "Team Leader (2D)", department: "Data Team", details: ["Responsible for the maintenance and operation of estimation solutions and cloud environments."] },
+            { company: "Astamuse", date: "2022.04 – 2022.09", title: "Hedge Fund Consultant", department: "Data Team", details: ["Analyzed patent data to identify stocks with high growth potential."] },
+            { company: "KPMG FAS", date: "2020.04 – 2022.03", title: "M&A Consultant", department: "Digital Team", details: ["Calculated goodwill at M&A and worked on several other PMI projects."] },
+            { company: "Misumi Corp", date: "2019.04 – 2020.03", title: "Logistic IT System", department: "New Graduate Position", details: ["Wrote and managed SQL queries for logistics and port systems."] }
         ]
     },
     jp: {
@@ -82,6 +91,15 @@ const languageData = {
             { institution: "東京工業大学", date: "2012.04 – 2016.03", degree: "工学学士", major: "機械工学", details: ["国費外国人留学生奨学金 受給"] },
             { institution: "盤浦高等学校", date: "2008.08 – 2010.02", degree: null, major: "大韓民国、ソウル", details: [] },
             { institution: "タルーナ高等学校", date: "2006.03 – 2008.07", degree: null, major: "オーストラリア、タスマニア", details: [] }
+        ],
+        // Work History Timeline
+        workHistoryTimeline: [
+            { company: "株式会社常盤植物化学研究所 [JPIX]", date: "2025.08 – 現在", title: "データサイエンティスト", department: "バリューアップチーム", details: ["プライベートエクイティチームのデータサイエンティストとして従事。"] },
+            { company: "メディカルフロンティア", date: "2024.08 – 2025.07", title: "データサイエンティスト", department: "経営企画部", details: ["経営企画部にてデータサイエンティストとして従事。"] },
+            { company: "キャディ株式会社", date: "2022.10 – 2024.07", title: "チームリーダー(2D)", department: "データチーム", details: ["見積もりソリューションとクラウド環境の保守・運用を担当。"] },
+            { company: "アスタミューゼ株式会社", date: "2022.04 – 2022.09", title: "ヘッジファンドコンサルタント", department: "データチーム", details: ["特許データを分析し、株価上昇が期待される銘柄を特定。"] },
+            { company: "KPMG FAS", date: "2020.04 – 2022.03", title: "M&Aコンサルタント", department: "デジタルチーム", details: ["M&Aにおけるのれんの算定、その他複数のPMIプロジェクトに従事。"] },
+            { company: "株式会社ミスミ", date: "2019.04 – 2020.03", title: "物流ITシステム担当", department: "新卒", details: ["物流および港湾システムのためのSQLクエリを作成・管理。"] }
         ]
     },
     kr: {
@@ -123,6 +141,15 @@ const languageData = {
             { institution: "도쿄 공업대학", date: "2012.04 – 2016.03", degree: "공학 학사", major: "기계공학", details: ["국비외국인유학생 장학금 수혜"] },
             { institution: "반포고등학교", date: "2008.08 – 2010.02", degree: null, major: "대한민국, 서울", details: [] },
             { institution: "타루나 고등학교", date: "2006.03 – 2008.07", degree: null, major: "호주, 타즈매니아", details: [] }
+        ],
+        // Work History Timeline
+        workHistoryTimeline: [
+            { company: "도키와 헬스케어 [JPIX]", date: "2025.08 – 현재", title: "데이터 과학자", department: "밸류 업 팀", details: ["사모펀드 팀의 데이터 과학자로 근무 중."] },
+            { company: "메디컬 프론티어", date: "2024.08 – 2025.07", title: "데이터 과학자", department: "기업 개발 부서", details: ["기업 부서에서 데이터 과학자로 근무 중."] },
+            { company: "Caddi", date: "2022.10 – 2024.07", title: "팀 리더(2D)", department: "데이터 팀", details: ["견적 솔루션 및 클라우드 환경 유지 관리 및 운영 담당."] },
+            { company: "아스타뮤제", date: "2022.04 – 2022.09", title: "헤지 펀드 컨설턴트", department: "데이터 팀", details: ["특허 데이터를 분석하여 주가 상승이 예상되는 종목을 식별."] },
+            { company: "KPMG FAS", date: "2020.04 – 2022.03", title: "M&A 컨설턴트", department: "디지털 팀", details: ["M&A에서 영업권 계산 및 기타 여러 PMI 프로젝트에 참여."] },
+            { company: "미스미 주식회사", date: "2019.04 – 2020.03", title: "물류 IT 시스템 담당", department: "신입 사원", details: ["물류 및 항만 시스템을 위한 SQL 쿼리 작성 및 관리."] }
         ]
     }
 };
@@ -157,6 +184,35 @@ function renderEducationTimeline(lang) {
 
     timelineContainer.innerHTML = htmlContent;
 };
+
+// Function to render the Work History timeline
+function renderWorkHistoryTimeline(lang) {
+    // Note: It uses the same class '.work-history' as your HTML
+    const timelineContainer = document.querySelector('.work-history-timeline');
+    if (!timelineContainer) return; 
+
+    const entries = languageData[lang].workHistoryTimeline;
+    if (!entries) return;
+    let htmlContent = '';
+
+    entries.forEach(entry => {
+        const detailsHtml = entry.details.map(detail => `<li>${detail}</li>`).join('');
+        const titleHtml = `<p class="degree-title"><strong>${entry.title},</strong> ${entry.department}</p>`;
+
+        htmlContent += `
+            <div class="education-entry">
+                <div class="education-header">
+                    <h3>${entry.company}</h3>
+                    <span class="date-range">${entry.date}</span>
+                </div>
+                <div class="education-body">
+                    ${titleHtml}
+                    ${detailsHtml ? `<ul>${detailsHtml}</ul>` : ''}
+                </div>
+            </div>`;
+    });
+    timelineContainer.innerHTML = htmlContent;
+}
 
 // 2. This function now updates any element that exists on the current page.
 function changeLanguage(lang) {
@@ -206,11 +262,14 @@ function changeLanguage(lang) {
 
     // You can add more IDs here for your other pages
     setText('education-title', languageData[lang].educationTitle);
+    setText('work-history-title', languageData[lang].workHistoryTitle);
+
+    // ✨ Bid
     renderEducationTimeline(lang);
+    renderWorkHistoryTimeline(lang);
     // For example, for skill.html:
     // setText('technical-skills-title', languageData[lang].technicalSkills);
 }
-
 
 
 // 3. This function initializes the language switcher and sets the event listener.
