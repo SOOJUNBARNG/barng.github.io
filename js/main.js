@@ -157,59 +157,38 @@ const languageData = {
     }
 };
 
-function renderEducationTimeline(lang) {
-    const timelineContainer = document.querySelector('.education-timeline');
-    if (!timelineContainer) return; 
+// --- RENDER FUNCTIONS ---
+function renderTimeline(lang, dataType, containerSelector, pageTitleId) {
+    const timelineContainer = document.querySelector(containerSelector);
+    // Only run if the container AND the specific page title exist
+    if (!timelineContainer || !document.getElementById(pageTitleId)) return;
 
-    // ✨ CHANGED: Access the timeline data from languageData[lang] ✨
-    const entries = languageData[lang].educationTimeline;
-    let htmlContent = '';
-
-    entries.forEach(entry => {
-        const detailsHtml = entry.details.map(detail => `<li>${detail}</li>`).join('');
-        const degreeHtml = entry.degree 
-            ? `<p class="degree-title"><strong>${entry.degree},</strong> ${entry.major}</p>`
-            : `<p class="location-title">${entry.major}</p>`;
-
-        htmlContent += `
-            <div class="education-entry">
-                <div class="education-header">
-                    <h3>${entry.institution}</h3>
-                    <span class="date-range">${entry.date}</span>
-                </div>
-                <div class="education-body">
-                    ${degreeHtml}
-                    ${detailsHtml ? `<ul>${detailsHtml}</ul>` : ''}
-                </div>
-            </div>
-        `;
-    });
-
-    timelineContainer.innerHTML = htmlContent;
-};
-
-// Function to render the Work History timeline
-function renderWorkHistoryTimeline(lang) {
-    // Note: It uses the same class '.work-history' as your HTML
-    const timelineContainer = document.querySelector('.work-history-timeline');
-    if (!timelineContainer) return; 
-
-    const entries = languageData[lang].workHistoryTimeline;
+    const entries = languageData[lang][dataType];
     if (!entries) return;
-    let htmlContent = '';
 
+    let htmlContent = '';
     entries.forEach(entry => {
         const detailsHtml = entry.details.map(detail => `<li>${detail}</li>`).join('');
-        const titleHtml = `<p class="degree-title"><strong>${entry.title},</strong> ${entry.department}</p>`;
+        let primaryTitle, secondaryTitle;
+
+        if (dataType === 'educationTimeline') {
+            primaryTitle = entry.institution;
+            secondaryTitle = entry.degree
+                ? `<p class="degree-title"><strong>${entry.degree},</strong> ${entry.major}</p>`
+                : `<p class="location-title">${entry.major}</p>`;
+        } else { // workHistoryTimeline
+            primaryTitle = entry.company;
+            secondaryTitle = `<p class="degree-title"><strong>${entry.title},</strong> ${entry.department}</p>`;
+        }
 
         htmlContent += `
             <div class="education-entry">
                 <div class="education-header">
-                    <h3>${entry.company}</h3>
+                    <h3>${primaryTitle}</h3>
                     <span class="date-range">${entry.date}</span>
                 </div>
                 <div class="education-body">
-                    ${titleHtml}
+                    ${secondaryTitle}
                     ${detailsHtml ? `<ul>${detailsHtml}</ul>` : ''}
                 </div>
             </div>`;
@@ -268,10 +247,8 @@ function changeLanguage(lang) {
     setText('work-history-title', languageData[lang].workHistoryTitle);
 
     // ✨ Bid
-    renderEducationTimeline(lang);
-    renderWorkHistoryTimeline(lang);
-    // For example, for skill.html:
-    // setText('technical-skills-title', languageData[lang].technicalSkills);
+    renderTimeline(lang, 'educationTimeline', '.timeline', 'education-title');
+    renderTimeline(lang, 'workHistoryTimeline', '.timeline', 'work-history-title');
 }
 
 
