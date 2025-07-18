@@ -210,6 +210,24 @@ ul li a:hover {
   content: none;
 }
 
+.skill-category .card-content {
+  margin-top: 15px;
+}
+
+.skill-category .card-content p {
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.skill-category .reference-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
 
 /* --- DOMAIN KNOWLEDGE SECTION --- */
 .domain-knowledge {
