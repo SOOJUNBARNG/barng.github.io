@@ -291,35 +291,35 @@ const languageData = {
         sidejobSukajanTitle: "스카잔 판매",
         sidejobSukajanDetail: "아이돌 그룹 BIGBANG을 계기로 한국에서 인기를 끈 일본 스카잔을 판매.",
         // Experience Page Data
-        experienceTitle: "Projects & Experiences",
-        expFrontierTitle: "Medical frontier / Corporate Strategy Dept. Leader (2024.08–2025.07)",
+        experienceTitle: "프로젝트 및 직무 경험",
+        expFrontierTitle: "메디컬 프론티어 / 경영전략부 리더 (2024.08–2025.07)",
         expFrontierContent: {
-            "PoC Projects": ["Real-time image analysis via YOLO", "Email automation using AI", "Speech To Text (STT) verification", "PPT Agent creation"],
-            "Application Development": ["PoC for a Flutter-based app to visualize plastic surgery Before & After", "Face recognition based on OpenCV"],
-            "Data Management": ["METABASE collection reduction for cost savings", "Automated shift creation using Python"],
-            "Machine Learning Projects": ["Counseling prediction using LSTM", "Employee turnover prediction using Random Forest (published on Hugging Face)", "Optimal employee recommendation model (RandomForestClassifier/Regressor)", "Coupon effectiveness analysis and LTV calculation"],
-            "IT Team Launch": ["BI tool selection", "Cloud infrastructure selection (including ETL/Trocco)", "GitHub configuration (Secrets, Actions)", "Glitch template publication"],
-            "General Tasks": ["Created training materials for SQL & AI", "Handled RPA/Scraping (weather data, new employee transport costs, national corporate data)", "Tableau Server/GCP operation"]
+            "PoC 프로젝트": ["YOLO를 통한 실시간 이미지 분석", "AI를 이용한 이메일 자동 발송", "음성 텍스트 변환(STT) 검증", "PPT 에이전트 제작"],
+            "어플리케이션 개발": ["Flutter 기반 성형 전후 시각화 앱 PoC", "OpenCV 기반 얼굴 인식"],
+            "데이터 관리": ["비용 절감을 위한 METABASE 컬렉션 축소", "Python을 이용한 근무 시프트 자동 생성"],
+            "머신러닝 프로젝트": ["LSTM을 이용한 상담 예측", "랜덤 포레스트를 이용한 퇴사자 예측 (Hugging Face에 공개)", "최적 직원 추천 모델 (RandomForestClassifier/Regressor)", "쿠폰 효과 검증 및 LTV 산출"],
+            "IT팀 신설": ["BI 툴 선정", "클라우드 인프라 선정 (ETL/Trocco 포함)", "GitHub 설정 (Secrets, Actions)", "Glitch 템플릿 공개"],
+            "기타 업무": ["SQL 및 AI 관련 교육 자료 작성", "RPA/스크레이핑 대응 (날씨 데이터, 신입사원 교통비, 전국 법인 데이터)", "Tableau Server/GCP 운영"]
         },
-        expCaddiTitle: "Caddi Inc. / Data Team Leader (2022.10–2024.09)",
+        expCaddiTitle: "캐디 주식회사 / 데이터팀 리더 (2022.10–2024.09)",
         expCaddiContent: {
-            "Estimation System Development": ["Derivation of appropriate prices for sheet metal products", "Development of Python modules"],
-            "Cloud (GCP) Operations": ["Cost reduction via Information_schema and CloudLogging", "ETL configuration (Trocco)", "Migration to SAP ByDesign"]
+            "견적 시스템 개발": ["판금 제품의 적정 가격 산출", "Python 모듈 개발"],
+            "클라우드 (GCP) 운영": ["Information_schema 및 CloudLogging을 통한 비용 절감", "ETL 설정 (Trocco)", "SAP ByDesign으로의 마이그레이션"]
         },
-        expAstamuseTitle: "Astamuse Inc. / Data Team (2022.04–2022.09)",
+        expAstamuseTitle: "아스타뮤제 주식회사 / 데이터팀 (2022.04–2022.09)",
         expAstamuseContent: {
-            "Investment Advisory Services": ["Extracted investment targets using patent data", "Created queries in GCP BigQuery for asset management firms"]
+            "투자 자문 서비스": ["특허 데이터를 활용한 투자 대상 추출", "자산 운용사를 위한 GCP BigQuery 쿼리 작성"]
         },
-        expKpmgTitle: "KPMG FAS / Associate (2020.04–2022.03)",
+        expKpmgTitle: "KPMG FAS / 어소시에이트 (2020.04–2022.03)",
         expKpmgContent: {
-            "Data Analysis": ["M&A data analysis for electric power, retail, rental, and real estate companies", "Financial modeling, numerical analysis, and sales forecasting", "Built data management models for PMI", "Dashboard creation with Alteryx and Tableau for KPI monitoring"],
-            "Tool Implementation": ["Benchmarked financial analysis tools", "Supported introduction and in-house development of overseas tools"]
+            "데이터 분석": ["전력, 소매, 렌탈, 부동산 기업의 M&A 데이터 분석", "재무 모델링, 수치 분석, 매출 예측", "PMI를 위한 데이터 관리 모델 구축", "Alteryx 및 Tableau를 이용한 KPI 모니터링 대시보드 제작"],
+            "해외 툴 도입": ["금융 분석 툴 벤치마킹", "해외 툴 도입 지원 및 자체 개발"]
         },
-        expMisumiTitle: "Misumi Group Inc. / Logistics IT (2019.04–2020.03)",
+        expMisumiTitle: "미스미 그룹 본사 / 물류 IT (2019.04–2020.03)",
         expMisumiContent: {
-            "Sales Training (Marketing)": ["New business data analysis, text mining", "Sample shipping and survey implementation", "Python training"],
-            "Warehouse System Operations": ["PC and equipment management", "Warehouse app setup", "Help desk support", "Data patching (correcting operational errors)"],
-            "System Migration Testing": ["On-batch schedule execution", "Core system migration testing (scenario creation and execution)"]
+            "영업 연수 (마케팅)": ["신규 사업 데이터 분석, 텍스트 마이닝", "샘플 발송 및 설문 조사 실시", "Python 교육"],
+            "창고 시스템 운영": ["PC 및 장비 관리", "창고 관련 앱 설정", "헬프 데스크 지원", "데이터 패치 (운영 오류 수정)"],
+            "기간 시스템 이전 테스트": ["온배치 스케줄 실행", "핵심 시스템 이전 테스트 (시나리오 작성 및 실행)"]
         }
     }
 };
