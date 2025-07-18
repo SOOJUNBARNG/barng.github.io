@@ -75,8 +75,38 @@ const languageData = {
         sidejobTieTitle: "500 Yen Ties",
         sidejobTieDetail: "Produced ties in China for sale in Japan.",
         sidejobSukajanTitle: "Sukajan Jacket Sales",
-        sidejobSukajanDetail: "Sold Japanese 'Sukajan' jackets in Korea, capitalizing on a trend from the K-pop group BIGBANG."
-
+        sidejobSukajanDetail: "Sold Japanese 'Sukajan' jackets in Korea, capitalizing on a trend from the K-pop group BIGBANG.",
+        // Experience Page Data
+        experienceTitle: "Projects & Experiences",
+        expFrontierTitle: "Medical frontier / Corporate Strategy Dept. Leader (2024.08–2025.07)",
+        expFrontierContent: {
+            "PoC Projects": ["Real-time image analysis via YOLO", "Email automation using AI", "Speech To Text (STT) verification", "PPT Agent creation"],
+            "Application Development": ["PoC for a Flutter-based app to visualize plastic surgery Before & After", "Face recognition based on OpenCV"],
+            "Data Management": ["METABASE collection reduction for cost savings", "Automated shift creation using Python"],
+            "Machine Learning Projects": ["Counseling prediction using LSTM", "Employee turnover prediction using Random Forest (published on Hugging Face)", "Optimal employee recommendation model (RandomForestClassifier/Regressor)", "Coupon effectiveness analysis and LTV calculation"],
+            "IT Team Launch": ["BI tool selection", "Cloud infrastructure selection (including ETL/Trocco)", "GitHub configuration (Secrets, Actions)", "Glitch template publication"],
+            "General Tasks": ["Created training materials for SQL & AI", "Handled RPA/Scraping (weather data, new employee transport costs, national corporate data)", "Tableau Server/GCP operation"]
+        },
+        expCaddiTitle: "Caddi Inc. / Data Team Leader (2022.10–2024.09)",
+        expCaddiContent: {
+            "Estimation System Development": ["Derivation of appropriate prices for sheet metal products", "Development of Python modules"],
+            "Cloud (GCP) Operations": ["Cost reduction via Information_schema and CloudLogging", "ETL configuration (Trocco)", "Migration to SAP ByDesign"]
+        },
+        expAstamuseTitle: "Astamuse Inc. / Data Team (2022.04–2022.09)",
+        expAstamuseContent: {
+            "Investment Advisory Services": ["Extracted investment targets using patent data", "Created queries in GCP BigQuery for asset management firms"]
+        },
+        expKpmgTitle: "KPMG FAS / Associate (2020.04–2022.03)",
+        expKpmgContent: {
+            "Data Analysis": ["M&A data analysis for electric power, retail, rental, and real estate companies", "Financial modeling, numerical analysis, and sales forecasting", "Built data management models for PMI", "Dashboard creation with Alteryx and Tableau for KPI monitoring"],
+            "Tool Implementation": ["Benchmarked financial analysis tools", "Supported introduction and in-house development of overseas tools"]
+        },
+        expMisumiTitle: "Misumi Group Inc. / Logistics IT (2019.04–2020.03)",
+        expMisumiContent: {
+            "Sales Training (Marketing)": ["New business data analysis, text mining", "Sample shipping and survey implementation", "Python training"],
+            "Warehouse System Operations": ["PC and equipment management", "Warehouse app setup", "Help desk support", "Data patching (correcting operational errors)"],
+            "System Migration Testing": ["On-batch schedule execution", "Core system migration testing (scenario creation and execution)"]
+        }
     },
     jp: {
         resumeTitle: "履歴書",
@@ -151,7 +181,38 @@ const languageData = {
         sidejobTieTitle: "５００円ネクタイ",
         sidejobTieDetail: "中国でネクタイを生産し、日本で販売。",
         sidejobSukajanTitle: "スカジャン販売",
-        sidejobSukajanDetail: "アイドルグループBIGBANGをきっかけに韓国で人気だった日本のスカジャンを販売。"
+        sidejobSukajanDetail: "アイドルグループBIGBANGをきっかけに韓国で人気だった日本のスカジャンを販売。",
+        // Experience Page Data
+        experienceTitle: "プロジェクト・職務経験",
+        expFrontierTitle: "株式会社メディカルフロンティア/経営戦略部 リーダー (2024年8月〜2025年7月)",
+        expFrontierContent: {
+            "各種PoC": ["Yolovを通じたリアルタイム画像分析", "AIを利用したメール自動送信", "STT（Speech To Text）検証", "PPT_agent作成"],
+            "アプリ制作": ["整形Before＆Afterが可視化できるFlutter基盤アプリPoc", "顔認識はOpenCVベース"],
+            "データマネジメント": ["METABASEのコレクション縮小＝コスト削減", "Pythonを利用したシフト自動作成"],
+            "各種マシーンラーニング": ["LSTMを利用したカウンセリング予測", "ランダムフォーレストを利用した退職者予測（Hugging Face公開）", "適正従業人レコメンデーション", "クーポン効果検証や算出によるLTV算出"],
+            "経営分析部ITチーム立ち上げ": ["BIツールの選定", "クラウド基盤選定（＋ETL・Trocco選定）", "GitHub各種設定（SecretID,Actions）", "Glitchテンプレート公開"],
+            "雑務": ["SQL・AI周り研修資料作成", "RPA・スクレイピング対応（全国天気・入職者交通費・全国法人データ）", "Tableau Server/GCP運用"]
+        },
+        expCaddiTitle: "キャディ株式会社/データチーム リーダー (2022年10月〜2024年9月)",
+        expCaddiContent: {
+            "見積もりシステム開発・保守・運用": ["板金製品適正価格の導出", "pythonモジュールの開発"],
+            "クラウド（GCP）費用カット・保守・運用": ["Information_schema、CloudLoggingからテーブル作成費用カット", "ETL設定（Trocco）", "SAP By designへ移行"]
+        },
+        expAstamuseTitle: "アスタミューゼ株式会社/データチーム (2022年4月〜2022年9月)",
+        expAstamuseContent: {
+            "特許データを利用した投資アドバイザリー業務": ["特許データを用いた投資銘柄抽出", "資産運用会社向けに特許データを用いた銘柄抽出", "GCPのBiｇqueryでクエリー分作成"]
+        },
+        expKpmgTitle: "株式会社KPMG FAS/アソシエイツ (2020年4月〜2022年3月)",
+        expKpmgContent: {
+            "データ分析": ["電力・小売り・レンタル・不動産企業のＭ＆Ａデータ分析", "財務モデリング、数値解析、売上予測", "PMIの為のデータ管理構築モデル", "ALTERYX, TABLEAUを用いたモデル構築とダッシュボード作成（KPIモニタリング）"],
+            "海外ツール導入・内製化": ["海外の財務分析ツールのAlteryxとTableauを通じた分析ベンチマーク", "海外ツールの導入支援と導入"]
+        },
+        expMisumiTitle: "株式会社ミスミグループ本社/物流IT (2019年4月〜2020年3月)",
+        expMisumiContent: {
+            "営業研修（マーケティング）": ["新規事業データ分析、テキストマイニング", "サンプル品発送、アンケート実施", "Python講習"],
+            "倉庫システム運用・保守・移転": ["PCや機材管理", "倉庫関連アプリ設営", "ヘルプデスク対応（システム仕様問い合わせ＆データパッチ）", "データパッチ（現場誤操作レコード修正）", "ベンダーへの調査・システム改修依頼"],
+            "基幹システム移行のシステムテスト": ["オンバッチスケジュール実行", "基幹システムの移行テスト（シナリオ作成及び実行）"]
+        }
 
     },
     kr: {
@@ -197,52 +258,12 @@ const languageData = {
         // Work History Timeline
         workHistoryTitle: "職務経歴",
         workHistoryTimeline: [
-            { company: "도키와 헬스케어 [JPIX]", date: "2025.08 – 현재", title: "데이터 과학자", department: "밸류 업 팀", details: ["사모펀드 팀의 데이터 과학자로 근무 중."],
-                projects: [
-                    { name: "インフラ周り", projectdetails: ["TableauServerのAWS設定", "AWSのIAMTerraform設定", "財務周り新規DB設計（店舗家賃関連データ）"] },
-                    { name: "CK・COのシフト自動作成", projectdetails: ["需要・勤務日数・休暇に合わせて営業社員の全国配置。"] },
-                    { name: "営業社員のお客様自動振り分け", projectdetails: ["過去データを利用したランダムフォーレスト分析。"] },
-                    { name: "RAG開発【社内専用CHATGPT作成】", projectdetails: ["スプレッドシートデータをベースとした、社内データ共有。"] }
-                ] 
-            },
-            { company: "메디컬 프론티어", date: "2024.08 – 2025.07", title: "데이터 과학자", department: "기업 개발 부서", details: ["기업 부서에서 데이터 과학자로 근무 중."],
-                projects: [
-                    { name: "インフラ周り", projectdetails: ["TableauServerのAWS設定", "AWSのIAMTerraform設定", "財務周り新規DB設計（店舗家賃関連データ）"] },
-                    { name: "CK・COのシフト自動作成", projectdetails: ["需要・勤務日数・休暇に合わせて営業社員の全国配置。"] },
-                    { name: "営業社員のお客様自動振り分け", projectdetails: ["過去データを利用したランダムフォーレスト分析。"] },
-                    { name: "RAG開発【社内専用CHATGPT作成】", projectdetails: ["スプレッドシートデータをベースとした、社内データ共有。"] }
-                ] 
-            },
-            { company: "Caddi", date: "2022.10 – 2024.07", title: "팀 리더(2D)", department: "데이터 팀", details: ["견적 솔루션 및 클라우드 환경 유지 관리 및 운영 담당."], 
-                projects: [
-                    { name: "インフラ周り", projectdetails: ["TableauServerのAWS設定", "AWSのIAMTerraform設定", "財務周り新規DB設計（店舗家賃関連データ）"] },
-                    { name: "CK・COのシフト自動作成", projectdetails: ["需要・勤務日数・休暇に合わせて営業社員の全国配置。"] },
-                    { name: "営業社員のお客様自動振り分け", projectdetails: ["過去データを利用したランダムフォーレスト分析。"] },
-                    { name: "RAG開発【社内専用CHATGPT作成】", projectdetails: ["スプレッドシートデータをベースとした、社内データ共有。"] }
-                ] 
-            },
-            { company: "아스타뮤제", date: "2022.04 – 2022.09", title: "헤지 펀드 컨설턴트", department: "데이터 팀", details: ["특허 데이터를 분석하여 주가 상승이 예상되는 종목을 식별."],
-                projects: [
-                    { name: "インフラ周り", projectdetails: ["TableauServerのAWS設定", "AWSのIAMTerraform設定", "財務周り新規DB設計（店舗家賃関連データ）"] },
-                    { name: "CK・COのシフト自動作成", projectdetails: ["需要・勤務日数・休暇に合わせて営業社員の全国配置。"] },
-                    { name: "営業社員のお客様自動振り分け", projectdetails: ["過去データを利用したランダムフォーレスト分析。"] },
-                    { name: "RAG開発【社内専用CHATGPT作成】", projectdetails: ["スプレッドシートデータをベースとした、社内データ共有。"] }
-                ] 
-            },
-            { company: "KPMG FAS", date: "2020.04 – 2022.03", title: "M&A 컨설턴트", department: "디지털 팀", details: ["M&A에서 영업권 계산 및 기타 여러 PMI 프로젝트에 참여."], 
-                projects: [
-                    { name: "インフラ周り", projectdetails: ["TableauServerのAWS設定", "AWSのIAMTerraform設定", "財務周り新規DB設計（店舗家賃関連データ）"] },
-                    { name: "CK・COのシフト自動作成", projectdetails: ["需要・勤務日数・休暇に合わせて営業社員の全国配置。"] },
-                    { name: "営業社員のお客様自動振り分け", projectdetails: ["過去データを利用したランダムフォーレスト分析。"] },
-                    { name: "RAG開発【社内専用CHATGPT作成】", projectdetails: ["スプレッドシートデータをベースとした、社内データ共有。"] }
-                ] 
-            },
-            { company: "미스미 주식회사", date: "2019.04 – 2020.03", title: "물류 IT 시스템 담당", department: "신입 사원", details: ["물류 및 항만 시스템을 위한 SQL 쿼리 작성 및 관리."], 
-                projects: [
-                    { name: "Naver marketing", projectdetails: ["Pythonを使い、プラットフォーム上の特定サイトへのアクセスを自動化。"] },
-                    { name: "Financial data analysis", projectdetails: ["在庫データや特許データを利用した分析をメインに担当。"] }
-                ] 
-            }
+            { company: "도키와 헬스케어 [JPIX]", date: "2025.08 – 현재", title: "데이터 과학자", department: "밸류 업 팀", details: ["사모펀드 팀의 데이터 과학자로 근무 중."]},
+            { company: "메디컬 프론티어", date: "2024.08 – 2025.07", title: "데이터 과학자", department: "기업 개발 부서", details: ["기업 부서에서 데이터 과학자로 근무 중."]},
+            { company: "Caddi", date: "2022.10 – 2024.07", title: "팀 리더(2D)", department: "데이터 팀", details: ["견적 솔루션 및 클라우드 환경 유지 관리 및 운영 담당."]},
+            { company: "아스타뮤제", date: "2022.04 – 2022.09", title: "헤지 펀드 컨설턴트", department: "데이터 팀", details: ["특허 데이터를 분석하여 주가 상승이 예상되는 종목을 식별."]},
+            { company: "KPMG FAS", date: "2020.04 – 2022.03", title: "M&A 컨설턴트", department: "디지털 팀", details: ["M&A에서 영업권 계산 및 기타 여러 PMI 프로젝트에 참여."]},
+            { company: "미스미 주식회사", date: "2019.04 – 2020.03", title: "물류 IT 시스템 담당", department: "신입 사원", details: ["물류 및 항만 시스템을 위한 SQL 쿼리 작성 및 관리."]}
         ],
         // References Page Data
         referencesTitle: "출판물 및 참고 자료",
@@ -268,7 +289,38 @@ const languageData = {
         sidejobTieTitle: "500엔 넥타이",
         sidejobTieDetail: "중국에서 넥타이를 생산하여 일본에서 판매.",
         sidejobSukajanTitle: "스카잔 판매",
-        sidejobSukajanDetail: "아이돌 그룹 BIGBANG을 계기로 한국에서 인기를 끈 일본 스카잔을 판매."
+        sidejobSukajanDetail: "아이돌 그룹 BIGBANG을 계기로 한국에서 인기를 끈 일본 스카잔을 판매.",
+        // Experience Page Data
+        experienceTitle: "Projects & Experiences",
+        expFrontierTitle: "Medical frontier / Corporate Strategy Dept. Leader (2024.08–2025.07)",
+        expFrontierContent: {
+            "PoC Projects": ["Real-time image analysis via YOLO", "Email automation using AI", "Speech To Text (STT) verification", "PPT Agent creation"],
+            "Application Development": ["PoC for a Flutter-based app to visualize plastic surgery Before & After", "Face recognition based on OpenCV"],
+            "Data Management": ["METABASE collection reduction for cost savings", "Automated shift creation using Python"],
+            "Machine Learning Projects": ["Counseling prediction using LSTM", "Employee turnover prediction using Random Forest (published on Hugging Face)", "Optimal employee recommendation model (RandomForestClassifier/Regressor)", "Coupon effectiveness analysis and LTV calculation"],
+            "IT Team Launch": ["BI tool selection", "Cloud infrastructure selection (including ETL/Trocco)", "GitHub configuration (Secrets, Actions)", "Glitch template publication"],
+            "General Tasks": ["Created training materials for SQL & AI", "Handled RPA/Scraping (weather data, new employee transport costs, national corporate data)", "Tableau Server/GCP operation"]
+        },
+        expCaddiTitle: "Caddi Inc. / Data Team Leader (2022.10–2024.09)",
+        expCaddiContent: {
+            "Estimation System Development": ["Derivation of appropriate prices for sheet metal products", "Development of Python modules"],
+            "Cloud (GCP) Operations": ["Cost reduction via Information_schema and CloudLogging", "ETL configuration (Trocco)", "Migration to SAP ByDesign"]
+        },
+        expAstamuseTitle: "Astamuse Inc. / Data Team (2022.04–2022.09)",
+        expAstamuseContent: {
+            "Investment Advisory Services": ["Extracted investment targets using patent data", "Created queries in GCP BigQuery for asset management firms"]
+        },
+        expKpmgTitle: "KPMG FAS / Associate (2020.04–2022.03)",
+        expKpmgContent: {
+            "Data Analysis": ["M&A data analysis for electric power, retail, rental, and real estate companies", "Financial modeling, numerical analysis, and sales forecasting", "Built data management models for PMI", "Dashboard creation with Alteryx and Tableau for KPI monitoring"],
+            "Tool Implementation": ["Benchmarked financial analysis tools", "Supported introduction and in-house development of overseas tools"]
+        },
+        expMisumiTitle: "Misumi Group Inc. / Logistics IT (2019.04–2020.03)",
+        expMisumiContent: {
+            "Sales Training (Marketing)": ["New business data analysis, text mining", "Sample shipping and survey implementation", "Python training"],
+            "Warehouse System Operations": ["PC and equipment management", "Warehouse app setup", "Help desk support", "Data patching (correcting operational errors)"],
+            "System Migration Testing": ["On-batch schedule execution", "Core system migration testing (scenario creation and execution)"]
+        }
     }
 };
 
@@ -329,6 +381,21 @@ function renderTimeline(lang, dataType, containerSelector, pageTitleId) {
     timelineContainer.innerHTML = htmlContent;
 }
 
+function renderFoldableContent(lang, contentKey, containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const contentData = languageData[lang][contentKey];
+    if (!contentData) return;
+
+    let htmlContent = '<ol>';
+    for (const category in contentData) {
+        const itemsHtml = contentData[category].map(item => `<li>${item}</li>`).join('');
+        htmlContent += `<li>${category}<ul>${itemsHtml}</ul></li>`;
+    }
+    htmlContent += '</ol>';
+    container.innerHTML = htmlContent;
+}
 
 // 2. This function now updates any element that exists on the current page.
 function changeLanguage(lang) {
@@ -366,6 +433,7 @@ function changeLanguage(lang) {
     setText('education-title', languageData[lang].educationTitle);
     setList('intro-text', languageData[lang].introText);
     setList('education-text', languageData[lang].educationText);
+    setText('experience-title', languageData[lang].experienceTitle);
     
     // ✨ NEW: Update skills page content
     setText('skills-title', languageData[lang].skillsTitle);
@@ -407,6 +475,18 @@ function changeLanguage(lang) {
    setText('sidejob-tie-detail', languageData[lang].sidejobTieDetail);
    setText('sidejob-sukajan-title', languageData[lang].sidejobSukajanTitle);
    setText('sidejob-sukajan-detail', languageData[lang].sidejobSukajanDetail);
+
+   // ✨ NEW: Render the dynamic foldable content for the experience page
+   setText('exp-frontier-title', languageData[lang].expFrontierTitle);
+   renderFoldableContent(lang, 'expFrontierContent', 'exp-frontier-content');
+   setText('exp-caddi-title', languageData[lang].expCaddiTitle);
+   renderFoldableContent(lang, 'expCaddiContent', 'exp-caddi-content');
+   setText('exp-astamuse-title', languageData[lang].expAstamuseTitle);
+   renderFoldableContent(lang, 'expAstamuseContent', 'exp-astamuse-content');
+   setText('exp-kpmg-title', languageData[lang].expKpmgTitle);
+   renderFoldableContent(lang, 'expKpmgContent', 'exp-kpmg-content');
+   setText('exp-misumi-title', languageData[lang].expMisumiTitle);
+   renderFoldableContent(lang, 'expMisumiContent', 'exp-misumi-content');
 
     // ✨ Bid
     renderTimeline(lang, 'educationTimeline', '.timeline', 'education-title');
