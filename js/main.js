@@ -78,8 +78,8 @@ const languageData = {
         sidejobSukajanDetail: "Sold Japanese 'Sukajan' jackets in Korea, capitalizing on a trend from the K-pop group BIGBANG.",
         // Experience Page Data
         experienceTitle: "Projects & Experiences",
-        expFrontierTitle: "Medical frontier / Corporate Strategy Dept. Leader (2024.08–2025.07)",
-        expFrontierContent: {
+        expMedicalFrontierTitle: "Medical frontier / Corporate Strategy Dept. Leader (2024.08–2025.07)",
+        expMedicalFrontierContent: {
             "PoC Projects": ["Real-time image analysis via YOLO", "Email automation using AI", "Speech To Text (STT) verification", "PPT Agent creation"],
             "Application Development": ["PoC for a Flutter-based app to visualize plastic surgery Before & After", "Face recognition based on OpenCV"],
             "Data Management": ["METABASE collection reduction for cost savings", "Automated shift creation using Python"],
@@ -184,8 +184,8 @@ const languageData = {
         sidejobSukajanDetail: "アイドルグループBIGBANGをきっかけに韓国で人気だった日本のスカジャンを販売。",
         // Experience Page Data
         experienceTitle: "プロジェクト・職務経験",
-        expFrontierTitle: "株式会社メディカルフロンティア/経営戦略部 リーダー (2024年8月〜2025年7月)",
-        expFrontierContent: {
+        expMedicalFrontierTitle: "株式会社メディカルフロンティア/経営戦略部 リーダー (2024年8月〜2025年7月)",
+        expMedicalFrontierContent: {
             "各種PoC": ["Yolovを通じたリアルタイム画像分析", "AIを利用したメール自動送信", "STT（Speech To Text）検証", "PPT_agent作成"],
             "アプリ制作": ["整形Before＆Afterが可視化できるFlutter基盤アプリPoc", "顔認識はOpenCVベース"],
             "データマネジメント": ["METABASEのコレクション縮小＝コスト削減", "Pythonを利用したシフト自動作成"],
@@ -292,8 +292,8 @@ const languageData = {
         sidejobSukajanDetail: "아이돌 그룹 BIGBANG을 계기로 한국에서 인기를 끈 일본 스카잔을 판매.",
         // Experience Page Data
         experienceTitle: "프로젝트 및 직무 경험",
-        expFrontierTitle: "메디컬 프론티어 / 경영전략부 리더 (2024.08–2025.07)",
-        expFrontierContent: {
+        expMedicalFrontierTitle: "메디컬 프론티어 / 경영전략부 리더 (2024.08–2025.07)",
+        expMedicalFrontierContent: {
             "PoC 프로젝트": ["YOLO를 통한 실시간 이미지 분석", "AI를 이용한 이메일 자동 발송", "음성 텍스트 변환(STT) 검증", "PPT 에이전트 제작"],
             "어플리케이션 개발": ["Flutter 기반 성형 전후 시각화 앱 PoC", "OpenCV 기반 얼굴 인식"],
             "데이터 관리": ["비용 절감을 위한 METABASE 컬렉션 축소", "Python을 이용한 근무 시프트 자동 생성"],
@@ -477,8 +477,8 @@ function changeLanguage(lang) {
    setText('sidejob-sukajan-detail', languageData[lang].sidejobSukajanDetail);
 
    // ✨ NEW: Render the dynamic foldable content for the experience page
-   setText('exp-frontier-title', languageData[lang].expFrontierTitle);
-   renderFoldableContent(lang, 'expFrontierContent', 'exp-frontier-content');
+   setText('exp-frontier-title', languageData[lang].expMedicalFrontierTitle);
+   renderFoldableContent(lang, 'expMedicalFrontierContent', 'exp-frontier-content');
    setText('exp-caddi-title', languageData[lang].expCaddiTitle);
    renderFoldableContent(lang, 'expCaddiContent', 'exp-caddi-content');
    setText('exp-astamuse-title', languageData[lang].expAstamuseTitle);
@@ -491,6 +491,7 @@ function changeLanguage(lang) {
     // ✨ Bid
     renderTimeline(lang, 'educationTimeline', '.timeline', 'education-title');
     renderTimeline(lang, 'workHistoryTimeline', '.timeline', 'work-history-title');
+    renderExperience(lang); 
 }
 
 
@@ -513,17 +514,19 @@ function initializeLanguage() {
 // ✨ NEW ✨
 // 4. This function initializes the foldable sections.
 function initializeFoldableSections() {
-    const foldableHeaders = document.querySelectorAll('.foldable-header');
-    foldableHeaders.forEach(header => {
-        header.addEventListener('click', () => {
+    document.body.addEventListener('click', function(event) {
+        const header = event.target.closest('.foldable-header');
+        if (header) {
             header.classList.toggle('is-open');
             const content = header.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
+            if (content && content.classList.contains('foldable-content')) {
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
             }
-        });
+        }
     });
 }
 
