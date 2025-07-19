@@ -106,6 +106,27 @@ const languageData = {
             "Sales Training (Marketing)": ["New business data analysis, text mining", "Sample shipping and survey implementation", "Python training"],
             "Warehouse System Operations": ["PC and equipment management", "Warehouse app setup", "Help desk support", "Data patching (correcting operational errors)"],
             "System Migration Testing": ["On-batch schedule execution", "Core system migration testing (scenario creation and execution)"]
+        },
+        programmingStudiesTitle: "Programming Studies",
+        programmingStudiesContent: {
+            "Human Recognition": [
+                "Tracking human movement in video footage.",
+                "<a href='https://github.com/SOOJUNBARNG/Medical_frontier_code/blob/main/Medical_frontier/Saito_san_requirements/video_capture_human.py' target='_blank' rel='noopener noreferrer'>Link to code</a>"
+            ],
+            "Financial Data Analysis": [
+                "A project focused on analyzing inventory and patent data.",
+                "Collects commodity and stock price data from Investing.com.",
+                "Gathers 20 years of patent data (in progress).",
+                "Uses historical data to make forecasts (partially implemented).",
+                "<a href='https://github.com/SOOJUNBARNG/securities_analysis' target='_blank' rel='noopener noreferrer'>Investment Support Tool</a>"
+            ],
+            "Fortune Telling Matching App": [
+                "A Saju (four pillars of destiny) application (some features are limited in the public version).",
+                "Personal fortune telling (logic partially public).",
+                "Couples' fortune telling (scoring evaluation only).",
+                "Matching feature (conditions are public, but actual matching is disabled).",
+                "<a href='https://github.com/SOOJUNBARNG/Real_python_uranai' target='_blank' rel='noopener noreferrer'>YRC Fortune-Telling Matching</a>"
+            ]
         }
     },
     jp: {
@@ -212,8 +233,28 @@ const languageData = {
             "営業研修（マーケティング）": ["新規事業データ分析、テキストマイニング", "サンプル品発送、アンケート実施", "Python講習"],
             "倉庫システム運用・保守・移転": ["PCや機材管理", "倉庫関連アプリ設営", "ヘルプデスク対応（システム仕様問い合わせ＆データパッチ）", "データパッチ（現場誤操作レコード修正）", "ベンダーへの調査・システム改修依頼"],
             "基幹システム移行のシステムテスト": ["オンバッチスケジュール実行", "基幹システムの移行テスト（シナリオ作成及び実行）"]
+        },
+        programmingStudiesTitle: "プログラミング勉強",
+        programmingStudiesContent: {
+            "人間認識": [
+                "人間追跡",
+                "<a href='https://github.com/SOOJUNBARNG/Medical_frontier_code/blob/main/Medical_frontier/Saito_san_requirements/video_capture_human.py' target='_blank' rel='noopener noreferrer'>人間認識コード</a>"
+            ],
+            "金融データ分析": [
+                "在庫データや特許データを利用した分析がメイン。",
+                "Investing.comのデータを収集し、現物・株価を分析。",
+                "20年間の特許データを収集（実装中）。",
+                "過去データを用いた予測（一部実装済み）。",
+                "<a href='https://github.com/SOOJUNBARNG/securities_analysis' target='_blank' rel='noopener noreferrer'>㈱投資補助ツール</a>"
+            ],
+            "占いマッチング": [
+                "四柱推命アプリ（公開版は一部機能のみ）。",
+                "自分占い（一部ロジックのみ公開）。",
+                "恋人占い（点数化評価のみ公開）。",
+                "マッチング占い（マッチング条件まで公開、実際のマッチングはしない）。",
+                "<a href='https://github.com/SOOJUNBARNG/Real_python_uranai' target='_blank' rel='noopener noreferrer'>YRC占いマッチング</a>"
+            ]
         }
-
     },
     kr: {
         resumeTitle: "이력서",
@@ -320,6 +361,27 @@ const languageData = {
             "영업 연수 (마케팅)": ["신규 사업 데이터 분석, 텍스트 마이닝", "샘플 발송 및 설문 조사 실시", "Python 교육"],
             "창고 시스템 운영": ["PC 및 장비 관리", "창고 관련 앱 설정", "헬프 데스크 지원", "데이터 패치 (운영 오류 수정)"],
             "기간 시스템 이전 테스트": ["온배치 스케줄 실행", "핵심 시스템 이전 테스트 (시나리오 작성 및 실행)"]
+        },
+        programmingStudiesTitle: "프로그래밍 공부",
+        programmingStudiesContent: {
+            "인간 인식": [
+                "영상 속 인간의 움직임 추적.",
+                "<a href='https://github.com/SOOJUNBARNG/Medical_frontier_code/blob/main/Medical_frontier/Saito_san_requirements/video_capture_human.py' target='_blank' rel='noopener noreferrer'>관련 코드 링크</a>"
+            ],
+            "금융 데이터 분석": [
+                "재고 및 특허 데이터를 활용한 분석 프로젝트.",
+                "Investing.com에서 원자재 및 주가 데이터 수집.",
+                "20년간의 특허 데이터 수집 (진행 중).",
+                "과거 데이터를 사용한 예측 (일부 구현).",
+                "<a href='httpss://github.com/SOOJUNBARNG/securities_analysis' target='_blank' rel='noopener noreferrer'>투자 보조 도구</a>"
+            ],
+            "운세 매칭 앱": [
+                "사주(四柱) 기반 어플리케이션 (공개 버전은 일부 기능 제한).",
+                "개인 운세 (일부 로직만 공개).",
+                "커플 운세 (점수 평가만 공개).",
+                "매칭 운세 (매칭 조건만 공개, 실제 매칭 기능은 비활성화).",
+                "<a href='https://github.com/SOOJUNBARNG/Real_python_uranai' target='_blank' rel='noopener noreferrer'>YRC 운세 매칭</a>"
+            ]
         }
     }
 };
@@ -491,6 +553,7 @@ function changeLanguage(lang) {
     // ✨ Bid
     renderTimeline(lang, 'educationTimeline', '.timeline', 'education-title');
     renderTimeline(lang, 'workHistoryTimeline', '.timeline', 'work-history-title');
+    renderFoldableContent(lang, 'programmingStudiesContent', 'programming-studies-content');
     renderExperience(lang); 
 }
 
