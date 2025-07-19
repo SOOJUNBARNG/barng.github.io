@@ -362,6 +362,7 @@ const languageData = {
             "창고 시스템 운영": ["PC 및 장비 관리", "창고 관련 앱 설정", "헬프 데스크 지원", "데이터 패치 (운영 오류 수정)"],
             "기간 시스템 이전 테스트": ["온배치 스케줄 실행", "핵심 시스템 이전 테스트 (시나리오 작성 및 실행)"]
         },
+        // Subjob
         programmingStudiesTitle: "프로그래밍 공부",
         programmingStudiesContent: {
             "인간 인식": [
@@ -554,7 +555,6 @@ function changeLanguage(lang) {
     renderTimeline(lang, 'educationTimeline', '.timeline', 'education-title');
     renderTimeline(lang, 'workHistoryTimeline', '.timeline', 'work-history-title');
     renderFoldableContent(lang, 'programmingStudiesContent', 'programming-studies-content');
-    renderExperience(lang); 
 }
 
 
