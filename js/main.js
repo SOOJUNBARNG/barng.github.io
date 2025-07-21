@@ -92,16 +92,16 @@ const languageData = {
             "Estimation System Development": ["Derivation of appropriate prices for sheet metal products", "Development of Python modules"],
             "Cloud (GCP) Operations": ["Cost reduction via Information_schema and CloudLogging", "ETL configuration (Trocco)", "Migration to SAP ByDesign"]
         },
-        expAstamuseTitle: "Astamuse Inc. / Data Team (2022.04–2022.09)",
+        expAstamuseTitle: "Astamuse Inc. / Data Team Senior Data Scientist(2022.04–2022.09)",
         expAstamuseContent: {
             "Investment Advisory Services": ["Extracted investment targets using patent data", "Created queries in GCP BigQuery for asset management firms"]
         },
-        expKpmgTitle: "KPMG FAS / Associate (2020.04–2022.03)",
+        expKpmgTitle: "KPMG FAS / M&A Team Associate (2020.04–2022.03)",
         expKpmgContent: {
             "Data Analysis": ["M&A data analysis for electric power, retail, rental, and real estate companies", "Financial modeling, numerical analysis, and sales forecasting", "Built data management models for PMI", "Dashboard creation with Alteryx and Tableau for KPI monitoring"],
             "Tool Implementation": ["Benchmarked financial analysis tools", "Supported introduction and in-house development of overseas tools"]
         },
-        expMisumiTitle: "Misumi Group Inc. / Logistics IT (2019.04–2020.03)",
+        expMisumiTitle: "Misumi Group Inc. / Logistics IT Member(2019.04–2020.03)",
         expMisumiContent: {
             "Sales Training (Marketing)": ["New business data analysis, text mining", "Sample shipping and survey implementation", "Python training"],
             "Warehouse System Operations": ["PC and equipment management", "Warehouse app setup", "Help desk support", "Data patching (correcting operational errors)"],
@@ -219,16 +219,16 @@ const languageData = {
             "見積もりシステム開発・保守・運用": ["板金製品適正価格の導出", "pythonモジュールの開発"],
             "クラウド（GCP）費用カット・保守・運用": ["Information_schema、CloudLoggingからテーブル作成費用カット", "ETL設定（Trocco）", "SAP By designへ移行"]
         },
-        expAstamuseTitle: "アスタミューゼ株式会社/データチーム (2022年4月〜2022年9月)",
+        expAstamuseTitle: "アスタミューゼ株式会社/データチーム シニアデータサイエンティスト(2022年4月〜2022年9月)",
         expAstamuseContent: {
             "特許データを利用した投資アドバイザリー業務": ["特許データを用いた投資銘柄抽出", "資産運用会社向けに特許データを用いた銘柄抽出", "GCPのBiｇqueryでクエリー分作成"]
         },
-        expKpmgTitle: "株式会社KPMG FAS/アソシエイツ (2020年4月〜2022年3月)",
+        expKpmgTitle: "株式会社KPMG FAS/M&Aチーム　アソシエイツ (2020年4月〜2022年3月)",
         expKpmgContent: {
             "データ分析": ["電力・小売り・レンタル・不動産企業のＭ＆Ａデータ分析", "財務モデリング、数値解析、売上予測", "PMIの為のデータ管理構築モデル", "ALTERYX, TABLEAUを用いたモデル構築とダッシュボード作成（KPIモニタリング）"],
             "海外ツール導入・内製化": ["海外の財務分析ツールのAlteryxとTableauを通じた分析ベンチマーク", "海外ツールの導入支援と導入"]
         },
-        expMisumiTitle: "株式会社ミスミグループ本社/物流IT (2019年4月〜2020年3月)",
+        expMisumiTitle: "株式会社ミスミグループ本社/物流IT 新卒(2019年4月〜2020年3月)",
         expMisumiContent: {
             "営業研修（マーケティング）": ["新規事業データ分析、テキストマイニング", "サンプル品発送、アンケート実施", "Python講習"],
             "倉庫システム運用・保守・移転": ["PCや機材管理", "倉庫関連アプリ設営", "ヘルプデスク対応（システム仕様問い合わせ＆データパッチ）", "データパッチ（現場誤操作レコード修正）", "ベンダーへの調査・システム改修依頼"],
@@ -347,16 +347,16 @@ const languageData = {
             "견적 시스템 개발": ["판금 제품의 적정 가격 산출", "Python 모듈 개발"],
             "클라우드 (GCP) 운영": ["Information_schema 및 CloudLogging을 통한 비용 절감", "ETL 설정 (Trocco)", "SAP ByDesign으로의 마이그레이션"]
         },
-        expAstamuseTitle: "아스타뮤제 주식회사 / 데이터팀 (2022.04–2022.09)",
+        expAstamuseTitle: "아스타뮤제 주식회사 / 데이터팀 상임 데이터사이언티스트(2022.04–2022.09)",
         expAstamuseContent: {
             "투자 자문 서비스": ["특허 데이터를 활용한 투자 대상 추출", "자산 운용사를 위한 GCP BigQuery 쿼리 작성"]
         },
-        expKpmgTitle: "KPMG FAS / 어소시에이트 (2020.04–2022.03)",
+        expKpmgTitle: "KPMG FAS / M&A팀 어소시에이트 (2020.04–2022.03)",
         expKpmgContent: {
             "데이터 분석": ["전력, 소매, 렌탈, 부동산 기업의 M&A 데이터 분석", "재무 모델링, 수치 분석, 매출 예측", "PMI를 위한 데이터 관리 모델 구축", "Alteryx 및 Tableau를 이용한 KPI 모니터링 대시보드 제작"],
             "해외 툴 도입": ["금융 분석 툴 벤치마킹", "해외 툴 도입 지원 및 자체 개발"]
         },
-        expMisumiTitle: "미스미 그룹 본사 / 물류 IT (2019.04–2020.03)",
+        expMisumiTitle: "미스미 그룹 본사 / 물류 IT　신입 (2019.04–2020.03)",
         expMisumiContent: {
             "영업 연수 (마케팅)": ["신규 사업 데이터 분석, 텍스트 마이닝", "샘플 발송 및 설문 조사 실시", "Python 교육"],
             "창고 시스템 운영": ["PC 및 장비 관리", "창고 관련 앱 설정", "헬프 데스크 지원", "데이터 패치 (운영 오류 수정)"],
@@ -495,7 +495,7 @@ function changeLanguage(lang) {
     setText('contact-title', languageData[lang].contactTitle);
     setText('education-title', languageData[lang].educationTitle);
     setList('intro-text', languageData[lang].introText);
-    setList('education-text', languageData[lang].educationText);
+    // setList('education-text', languageData[lang].educationText);
     setText('experience-title', languageData[lang].experienceTitle);
     
     // ✨ NEW: Update skills page content
