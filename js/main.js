@@ -6,11 +6,12 @@ const languageData = {
         resumeTitle: "Resume",
         introTitle: "Introduction",
         introText: [
-            "Hello, this is a GitHub blog for job hunting.",
-            "Majored in mechanical engineering and nuclear engineering at Tokyo Tech.",
-            "Sincerely interested in finance, especially passive investment derived from machine learning, based on patents, raw materials, and XBRL.",
-            "My second job involves investment, running a dating application, and facilitating foreigner exchanges between Korea and Japan.",
-            "Ultimately interested in pursuing marriage and a good life."
+            "Hello, this is Barng's GitHub blog for job hunting.",
+            "I majored in Mechanical Engineering and Nuclear Engineering at the Tokyo Institute of Technology.",
+            "While my skills may still be developing, I aim to become an 'IT jack-of-all-trades' by challenging myself with various implementations.",
+            "I am particularly interested in passive investment through machine learning, utilizing patent, inventory, and XBRL data.",
+            "As a side business, I engage in simple trade, run a dating app, and offer job hunting guidance.",
+            "Ultimately, I aim for a happy marriage and to bring joy to others."
         ],
         contactTitle: "Contact Me",
         educationTitle: "Educational Background",
@@ -137,7 +138,7 @@ const languageData = {
             "東京工業大学で機械工学と原子力工学を専攻。",
             "実力は足りないが、様々な実装に挑戦しながらIT何でも屋さんを目指しています。",
             "特に特許、在庫データ、XBRLを活用した機械学習によるパッシブ投資に興味があります。",
-            "簡単な貿易、デートアプリ運営、ドローン関連、服の転売、就活指導副業を行っています。",
+            "簡単な貿易、デートアプリ運営、就活指導副業を行っています。",
             "最終的には幸せな結婚や他人に喜びを伝えることを目指しています。"
         ],
         contactTitle: "連絡先",
@@ -165,7 +166,7 @@ const languageData = {
         domainKnowledgeTitle: "ドメイン知識",
         // Education Timeline
         educationTimeline: [
-            { institution: "東京工業大学", date: "2016.04 – 2019.03", degree: "工学・理学修士", major: "　原子力工学", details: ["国費外国人留学生奨学金 受給"] },
+            { institution: "東京工業大学大学院", date: "2016.04 – 2019.03", degree: "工学・理学修士", major: "　原子力工学", details: ["国費外国人留学生奨学金 受給"] },
             { institution: "東京工業大学", date: "2012.04 – 2016.03", degree: "工学学士", major: "　機械工学", details: ["国費外国人留学生奨学金 受給"] },
             { institution: "盤浦高等学校", date: "2008.08 – 2010.02", degree: null, major: "大韓民国、ソウル", details: [] },
             { institution: "タルーナ高等学校", date: "2006.03 – 2008.07", degree: null, major: "オーストラリア、タスマニア", details: [] }
@@ -261,11 +262,12 @@ const languageData = {
         resumeTitle: "이력서",
         introTitle: "소개",
         introText: [
-            "안녕하세요, 구직을 위한 GitHub 블로그입니다.",
-            "도쿄 공과대학에서 기계공학과 원자력공학을 전공했습니다.",
-            "특히 특허, 원자재, XBRL을 활용한 기계 학습 기반 패시브 투자에 관심이 많습니다.",
-            "투자, 데이팅 앱 운영, 한국과 일본 간 외국인 교류를 촉진하는 부업을 하고 있습니다.",
-            "궁극적으로 결혼과 좋은 삶을 추구하고 싶습니다."
+            "안녕하세요, 취업 활동을 위한 방(房)의 GitHub 블로그입니다.",
+            "도쿄공업대학에서 기계공학과 원자력공학을 전공했습니다.",
+            "실력은 부족하지만, 다양한 구현에 도전하며 'IT 만능 해결사'를 목표로 하고 있습니다.",
+            "특히 특허, 재고 데이터, XBRL을 활용한 머신러닝 기반의 패시브 투자에 관심이 많습니다.",
+            "간단한 무역, 데이팅 앱 운영, 취업 지도 부업을 하고 있습니다.",
+            "궁극적으로는 행복한 결혼과 다른 사람에게 기쁨을 전하는 것을 목표로 하고 있습니다."
         ],
         contactTitle: "연락처",
         educationTitle: "학력",
