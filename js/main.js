@@ -158,9 +158,9 @@ const languageData = {
         others: "その他",
         // SKILL PAGE
         skillsTitle: "スキルと専門知識",
-        dataScienceTitle: "データサイエンスと機械学習",
+        dataScienceTitle: "データサイエンス",
         appDevTitle: "アプリ・Web開発",
-        cloudDbTitle: "クラウドとデータベース管理",
+        cloudDbTitle: "クラウドとデータベース",
         biAnalyticsTitle: "BIとデータ分析",
         corporateTitle: "経営管理関連スキル",
         domainKnowledgeTitle: "ドメイン知識",
@@ -286,9 +286,9 @@ const languageData = {
         others: "기타",
         // SKILL PAGE
         skillsTitle: "기술 및 전문 지식",
-        dataScienceTitle: "데이터 과학 및 머신러닝",
+        dataScienceTitle: "머신러닝",
         appDevTitle: "어플리케이션 및 웹 개발",
-        cloudDbTitle: "클라우드 및 데이터베이스 관리",
+        cloudDbTitle: "클라우드 및 데이터베이스",
         biAnalyticsTitle: "BI 및 분석",
         corporateTitle: "경영관리 지식",
         domainKnowledgeTitle: "전문 분야 지식",
