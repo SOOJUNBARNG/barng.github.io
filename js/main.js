@@ -39,8 +39,8 @@ const languageData = {
         domainKnowledgeTitle: "Domain Knowledge",
         // Education Timeline
         educationTimeline: [
-            { institution: "Tokyo Institute of Technology", date: "2016.04 – 2019.03", degree: "Master of Engineering & Science", major: " Nuclear Engineering", details: ["Recipient of the MEXT National Scholarship"] },
-            { institution: "Tokyo Institute of Technology", date: "2012.04 – 2016.03", degree: "Bachelor of Engineering", major: " Mechanical Engineering", details: ["Recipient of the MEXT National Scholarship"] },
+            { institution: "Institute of Science Tokyo", date: "2016.04 – 2019.03", degree: "Master of Engineering & Science", major: " Nuclear Engineering", details: ["Recipient of the MEXT National Scholarship"] },
+            { institution: "Institute of Science Tokyo", date: "2012.04 – 2016.03", degree: "Bachelor of Engineering", major: " Mechanical Engineering", details: ["Recipient of the MEXT National Scholarship"] },
             { institution: "Banpo High School", date: "2008.08 – 2010.02", degree: null, major: "Seoul, South Korea", details: [] },
             { institution: "Taroona High School", date: "2006.03 – 2008.07", degree: null, major: "Tasmania, Australia", details: [] }
         ],
@@ -168,8 +168,8 @@ const languageData = {
         domainKnowledgeTitle: "ドメイン知識",
         // Education Timeline
         educationTimeline: [
-            { institution: "東京工業大学大学院", date: "2016.04 – 2019.03", degree: "工学・理学修士", major: "　原子力工学", details: ["国費外国人留学生奨学金 受給"] },
-            { institution: "東京工業大学", date: "2012.04 – 2016.03", degree: "工学学士", major: "　機械工学", details: ["国費外国人留学生奨学金 受給"] },
+            { institution: "東京科学大学・旧東京工業大学大学院", date: "2016.04 – 2019.03", degree: "工学・理学修士", major: "　原子力工学", details: ["国費外国人留学生奨学金 受給"] },
+            { institution: "東京科学大学・旧東京工業大学", date: "2012.04 – 2016.03", degree: "工学学士", major: "　機械工学", details: ["国費外国人留学生奨学金 受給"] },
             { institution: "盤浦高等学校", date: "2008.08 – 2010.02", degree: null, major: "大韓民国、ソウル", details: [] },
             { institution: "タルーナ高等学校", date: "2006.03 – 2008.07", degree: null, major: "オーストラリア、タスマニア", details: [] }
         ],
@@ -277,8 +277,8 @@ const languageData = {
         educationText: [
             "타루나 고등학교 (호주 태즈매니아)",
             "반포 고등학교 (한국 서울)",
-            "도쿄 공과대학 (기계공학) - 국비유학생",
-            "도쿄 공과대학 (원자력공학) - 국비장학생 / 이학 및 공학 학위"
+            "도쿄 공업대학 (기계공학) - 국비유학생",
+            "도쿄 공업대학 (원자력공학) - 국비장학생 / 이학 및 공학 학위"
         ],
         home: "홈",
         education: "학력",
