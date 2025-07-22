@@ -46,7 +46,7 @@ const languageData = {
         // ✨ NEW: Work History Timeline Data
         workHistoryTitle: "Work History",
         workHistoryTimeline: [
-            { company: "Tokiwa Health Care [JPIX]", date: "2025.08 – Present", title: "Data Scientist", department: "Value Up Team", details: ["Served as a data scientist for the private equity team."] },
+            { company: "Tokiwa Health Care", date: "2025.08 – Present", title: "Data Scientist", department: "Value Up Team", details: ["Served as a data scientist for the private equity team."] },
             { company: "Medical frontier", date: "2024.08 – 2025.07", title: "Leader", department: "Corporate Development Department", details: ["Served as a data scientist for the corporate department in general."] },
             { company: "Caddi", date: "2022.10 – 2024.07", title: "Team Leader (2D)", department: "Data Team", details: ["Responsible for the maintenance and operation of estimation solutions and cloud environments."] },
             { company: "Astamuse", date: "2022.04 – 2022.09", title: "Senior Data Scientist", department: "Data Team", details: ["Analyzed patent data to identify stocks with high growth potential."] },
@@ -302,9 +302,9 @@ const languageData = {
         // Work History Timeline
         workHistoryTitle: "직무경험",
         workHistoryTimeline: [
-            { company: "도키와 헬스케어 [JPIX]", date: "2025.08 – 현재", title: "데이터 과학자", department: "밸류 업 팀", details: ["사모펀드 팀의 데이터 과학자로 근무 중."]},
-            { company: "메디컬 프론티어", date: "2024.08 – 2025.07", title: "데이터 과학자", department: "기업 개발 부서", details: ["기업 부서에서 데이터 과학자로 근무 중."]},
-            { company: "Caddi", date: "2022.10 – 2024.07", title: "팀 리더(2D)", department: "데이터 팀", details: ["견적 솔루션 및 클라우드 환경 유지 관리 및 운영 담당."]},
+            { company: "도키와 헬스케어", date: "2025.08 – 현재", title: "데이터 과학자", department: "밸류 업 팀", details: ["사모펀드 팀의 데이터 과학자로 근무 중."]},
+            { company: "메디컬 프론티어", date: "2024.08 – 2025.07", title: "데이터 과학자", department: "경영기획", details: ["경영기획 부서에서 데이터 과학자로 근무 중."]},
+            { company: "Caddi", date: "2022.10 – 2024.07", title: "팀 리더", department: "데이터 팀", details: ["견적 솔루션 및 클라우드 환경 유지 관리 및 운영 담당."]},
             { company: "아스타뮤제", date: "2022.04 – 2022.09", title: "시니어 데이터사이언티스트", department: "데이터 팀", details: ["특허 데이터를 분석하여 주가 상승이 예상되는 종목을 식별."]},
             { company: "KPMG FAS", date: "2020.04 – 2022.03", title: "M&A 컨설턴트", department: "디지털 팀", details: ["M&A에서 영업권 계산 및 기타 여러 PMI 프로젝트에 참여."]},
             { company: "미스미 주식회사", date: "2019.04 – 2020.03", title: "물류 IT 시스템 담당", department: "신입 사원", details: ["물류 및 항만 시스템을 위한 SQL 쿼리 작성 및 관리."]}
