@@ -5,6 +5,7 @@ const languageData = {
     en: {
         resumeTitle: "Resume",
         introTitle: "Introduction",
+        emailTitle: "Email",
         introText: [
             "Hello, this is Barng's GitHub blog for job hunting.",
             "I majored in Mechanical Engineering and Nuclear Engineering at the Tokyo Institute of Technology.",
@@ -133,6 +134,7 @@ const languageData = {
     jp: {
         resumeTitle: "履歴書",
         introTitle: "自己紹介",
+        emailTitle: "Eメール",
         introText: [
             "こんにちは、これは就職活動のための房のGitHubブログです。",
             "東京工業大学で機械工学と原子力工学を専攻。",
@@ -261,6 +263,7 @@ const languageData = {
     kr: {
         resumeTitle: "이력서",
         introTitle: "소개",
+        emailTitle: "이메일",
         introText: [
             "안녕하세요, 취업 활동을 위한 방(房)의 GitHub 블로그입니다.",
             "도쿄공업대학에서 기계공학과 원자력공학을 전공했습니다.",
@@ -497,6 +500,7 @@ function changeLanguage(lang) {
     // Update main content (only if the elements exist on the current page)
     setText('intro-title', languageData[lang].introTitle);
     setText('contact-title', languageData[lang].contactTitle);
+    setText('email-title', languageData[lang].emailTitle);
     setText('education-title', languageData[lang].educationTitle);
     setList('intro-text', languageData[lang].introText);
     // setList('education-text', languageData[lang].educationText);
