@@ -80,7 +80,7 @@ const languageData = {
         sidejobSukajanDetail: "Sold Japanese 'Sukajan' jackets in Korea, capitalizing on a trend from the K-pop group BIGBANG.",
         // Experience Page Data
         experienceTitle: "Projects & Experiences",
-        expTokiwaHealthCateTitle: "ときわヘルスケア(Jpix) / IT Expert (2025.08–Current)",
+        expTokiwaHealthCareTitle: "ときわヘルスケア(Jpix) / IT Expert (2025.08–Current)",
         expTokiwaHealthCareContent: {
             "PoC Projects": ["Line_AI_Chatbot", "Email automationI", "PPT Agent creation"],
             "Application Development": ["PoC for a Flutter-based app to visualize plastic surgery Before & After", "Face recognition based on OpenCV"],
@@ -218,7 +218,7 @@ const languageData = {
         sidejobSukajanDetail: "アイドルグループBIGBANGをきっかけに韓国で人気だった日本のスカジャンを販売。",
         // Experience Page Data
         experienceTitle: "プロジェクト・職務経験",
-        expTokiwaHealthCateTitle: "ときわヘルスケア(Jpix) / ITエキスパート (2025.08–現在)",
+        expTokiwaHealthCareTitle: "ときわヘルスケア(Jpix) / ITエキスパート (2025.08–現在)",
         expTokiwaHealthCareContent: {
             "PoCプロジェクト": ["LINE AIチャットボット", "メール自動化", "PPT自動生成エージェントの作成"],
             "アプリケーション開発": ["Flutterを用いた美容整形ビフォーアフター可視化アプリのPoC", "OpenCVによる顔認証"],
@@ -357,7 +357,7 @@ const languageData = {
         sidejobSukajanDetail: "아이돌 그룹 BIGBANG을 계기로 한국에서 인기를 끈 일본 스카잔을 판매.",
         // Experience Page Data
         experienceTitle: "프로젝트 및 직무 경험",
-        expTokiwaHealthCateTitle: "토키와 헬스케어(Jpix) / IT 전문가 (2025.08–현재)",
+        expTokiwaHealthCareTitle: "토키와 헬스케어(Jpix) / IT 전문가 (2025.08–현재)",
         expTokiwaHealthCareContent: {
             "PoC 프로젝트": ["LINE AI 챗봇", "이메일 자동화", "PPT 에이전트 생성"],
             "애플리케이션 개발": ["Flutter 기반 성형수술 전후(Before & After) 시각화 앱 PoC", "OpenCV 기반 얼굴 인식"],
