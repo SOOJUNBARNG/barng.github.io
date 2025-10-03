@@ -47,7 +47,7 @@ const languageData = {
         // ✨ NEW: Work History Timeline Data
         workHistoryTitle: "Work History",
         workHistoryTimeline: [
-            { company: "Tokiwa Health Care", date: "2025.08 – Present", title: "Data Scientist", department: "Value Up Team", details: ["Served as a data scientist for the private equity team."] },
+            { company: "Tokiwa Health Care[Jpix]", date: "2025.08 – Present", title: "Data Scientist", department: "Value Up Team", details: ["Served as a data scientist for the private equity team."] },
             { company: "Medical frontier", date: "2024.08 – 2025.07", title: "Leader", department: "Corporate Development Department", details: ["Served as a data scientist for the corporate department in general."] },
             { company: "Caddi", date: "2022.10 – 2024.07", title: "Team Leader (2D)", department: "Data Team", details: ["Responsible for the maintenance and operation of estimation solutions and cloud environments."] },
             { company: "Astamuse", date: "2022.04 – 2022.09", title: "Senior Data Scientist", department: "Data Team", details: ["Analyzed patent data to identify stocks with high growth potential."] },
@@ -80,6 +80,15 @@ const languageData = {
         sidejobSukajanDetail: "Sold Japanese 'Sukajan' jackets in Korea, capitalizing on a trend from the K-pop group BIGBANG.",
         // Experience Page Data
         experienceTitle: "Projects & Experiences",
+        expTokiwaHealthCateTitle: "ときわヘルスケア(Jpix) / IT Expert (2025.08–Current)",
+        expTokiwaHealthCareContent: {
+            "PoC Projects": ["Line_AI_Chatbot", "Email automationI", "PPT Agent creation"],
+            "Application Development": ["PoC for a Flutter-based app to visualize plastic surgery Before & After", "Face recognition based on OpenCV"],
+            "IT ": ["METABASE collection reduction for cost savings", "Automated shift creation using Python"],
+            "Machine Learning Projects": [ "Employee turnover prediction using Random Forest (published on Hugging Face)", "Optimal employee recommendation model (RandomForestClassifier/Regressor)"],
+            "IT Team Launch": ["BI tool selection", "Cloud infrastructure selection (including ETL/Trocco)", "GitHub configuration (Secrets, Actions)"],
+            "General Tasks": [ "Handled RPA/Scraping (weather data, new employee transport costs, national corporate data, 求人票データ)", "Tableau Server/GCP operation"]
+        },
         expMedicalFrontierTitle: "Medical frontier / Corporate Strategy Dept. Leader (2024.08–2025.07)",
         expMedicalFrontierContent: {
             "PoC Projects": ["Real-time image analysis via YOLO", "Email automation using AI", "Speech To Text (STT) verification", "PPT Agent creation"],
@@ -176,7 +185,7 @@ const languageData = {
         // Work History Timeline
         workHistoryTitle: "職務経歴",
         workHistoryTimeline: [
-            { company: "ときわヘルスケア [JPIX投資先]", date: "2025.08 – 現在", title: "エキスパート", department: "バリューアップチーム", details: ["プライベートエクイティチームのデータサイエンティストとして従事。"] },
+            { company: "ときわヘルスケア [JPIX]", date: "2025.08 – 現在", title: "エキスパート", department: "バリューアップチーム", details: ["プライベートエクイティチームのデータサイエンティストとして従事。"] },
             { company: "メディカルフロンティア", date: "2024.08 – 2025.07", title: "リーダー", department: "経営企画部", details: ["経営企画部にてデータサイエンティストとして従事。"] },
             { company: "キャディ株式会社", date: "2022.10 – 2024.07", title: "チームリーダー(2D)", department: "データチーム", details: ["見積もりソリューションとクラウド環境の保守・運用を担当。"] },
             { company: "アスタミューゼ株式会社", date: "2022.04 – 2022.09", title: "シニアデータサイエンティスト", department: "データチーム", details: ["特許データを分析し、株価上昇が期待される銘柄を特定。"] },
@@ -209,6 +218,15 @@ const languageData = {
         sidejobSukajanDetail: "アイドルグループBIGBANGをきっかけに韓国で人気だった日本のスカジャンを販売。",
         // Experience Page Data
         experienceTitle: "プロジェクト・職務経験",
+        expTokiwaHealthCateTitle: "ときわヘルスケア(Jpix) / ITエキスパート (2025.08–現在)",
+        expTokiwaHealthCareContent: {
+            "PoCプロジェクト": ["LINE AIチャットボット", "メール自動化", "PPT自動生成エージェントの作成"],
+            "アプリケーション開発": ["Flutterを用いた美容整形ビフォーアフター可視化アプリのPoC", "OpenCVによる顔認証"],
+            "IT業務": ["コスト削減のためのMETABASEコレクション削減", "Pythonによるシフト自動作成"],
+            "機械学習プロジェクト": ["ランダムフォレストによる従業員離職予測（Hugging Faceで公開）", "最適人材推薦モデル（RandomForestClassifier/Regressor）"],
+            "ITチームの立ち上げ": ["BIツールの選定", "クラウドインフラの選定（ETL/Troccoを含む）", "GitHubの設定（Secrets, Actions）"],
+            "一般業務": ["RPA/スクレイピング対応（気象データ、新入社員の交通費、全国法人データ、求人票データ）", "Tableau Server/GCPの運用"]
+        },
         expMedicalFrontierTitle: "株式会社メディカルフロンティア/経営戦略部 リーダー (2024年8月〜2025年7月)",
         expMedicalFrontierContent: {
             "各種PoC": ["Yolovを通じたリアルタイム画像分析", "AIを利用したメール自動送信", "STT（Speech To Text）検証", "PPT_agent作成"],
@@ -305,7 +323,7 @@ const languageData = {
         // Work History Timeline
         workHistoryTitle: "직무경험",
         workHistoryTimeline: [
-            { company: "도키와 헬스케어", date: "2025.08 – 현재", title: "데이터 과학자", department: "밸류 업 팀", details: ["사모펀드 팀의 데이터 과학자로 근무 중."]},
+            { company: "도키와 헬스케어(Jpix)", date: "2025.08 – 현재", title: "데이터 과학자", department: "밸류 업 팀", details: ["사모펀드 팀의 데이터 과학자로 근무 중."]},
             { company: "메디컬 프론티어", date: "2024.08 – 2025.07", title: "데이터 과학자", department: "경영기획", details: ["경영기획 부서에서 데이터 과학자로 근무 중."]},
             { company: "Caddi", date: "2022.10 – 2024.07", title: "팀 리더", department: "데이터 팀", details: ["견적 솔루션 및 클라우드 환경 유지 관리 및 운영 담당."]},
             { company: "아스타뮤제", date: "2022.04 – 2022.09", title: "시니어 데이터사이언티스트", department: "데이터 팀", details: ["특허 데이터를 분석하여 주가 상승이 예상되는 종목을 식별."]},
@@ -339,6 +357,15 @@ const languageData = {
         sidejobSukajanDetail: "아이돌 그룹 BIGBANG을 계기로 한국에서 인기를 끈 일본 스카잔을 판매.",
         // Experience Page Data
         experienceTitle: "프로젝트 및 직무 경험",
+        expTokiwaHealthCateTitle: "토키와 헬스케어(Jpix) / IT 전문가 (2025.08–현재)",
+        expTokiwaHealthCareContent: {
+            "PoC 프로젝트": ["LINE AI 챗봇", "이메일 자동화", "PPT 에이전트 생성"],
+            "애플리케이션 개발": ["Flutter 기반 성형수술 전후(Before & After) 시각화 앱 PoC", "OpenCV 기반 얼굴 인식"],
+            "IT 업무": ["비용 절감을 위한 METABASE 컬렉션 축소", "Python을 이용한 근무 시프트 자동 생성"],
+            "머신러닝 프로젝트": ["랜덤 포레스트를 이용한 직원 이직 예측 (Hugging Face에 게시)", "최적의 직원 추천 모델 (RandomForestClassifier/Regressor)"],
+            "IT 팀 구축": ["BI 툴 선정", "클라우드 인프라 선정 (ETL/Trocco 포함)", "GitHub 설정 (Secrets, Actions)"],
+            "일반 업무": ["RPA/스크래핑 처리 (날씨 데이터, 신입사원 교통비, 전국 법인 데이터, 채용공고 데이터)", "Tableau Server/GCP 운영"]
+        },
         expMedicalFrontierTitle: "메디컬 프론티어 / 경영전략부 리더 (2024.08–2025.07)",
         expMedicalFrontierContent: {
             "PoC 프로젝트": ["YOLO를 통한 실시간 이미지 분석", "AI를 이용한 이메일 자동 발송", "음성 텍스트 변환(STT) 검증", "PPT 에이전트 제작"],
@@ -548,6 +575,8 @@ function changeLanguage(lang) {
    setText('sidejob-sukajan-detail', languageData[lang].sidejobSukajanDetail);
 
    // ✨ NEW: Render the dynamic foldable content for the experience page
+   setText('exp-tokiwa-title', languageData[lang].expTokiwaHealthCareTitle);
+   renderFoldableContent(lang, 'expTokiwaHealthCareContent', 'exp-tokiwa-content');
    setText('exp-frontier-title', languageData[lang].expMedicalFrontierTitle);
    renderFoldableContent(lang, 'expMedicalFrontierContent', 'exp-frontier-content');
    setText('exp-caddi-title', languageData[lang].expCaddiTitle);
