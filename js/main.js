@@ -220,9 +220,11 @@ const languageData = {
         experienceTitle: "プロジェクト・職務経験",
         expTokiwaHealthCareTitle: "ときわヘルスケア(Jpix) / ITエキスパート (2025.08–現在)",
         expTokiwaHealthCareContent: {
-            "PoCプロジェクト": ["LINE AIチャットボット", "メール自動化", "PPT自動生成エージェントの作成"],
+            "PoCプロジェクト": ["AIボイスボット","AIチャットボット", "メール自動化", "PPT自動生成エージェントの作成"],
             "アプリケーション開発": ["Flutterを用いた美容整形ビフォーアフター可視化アプリのPoC", "OpenCVによる顔認証"],
             "IT業務": ["コスト削減のためのMETABASEコレクション削減", "Pythonによるシフト自動作成"],
+            "Saas選定": ["電子カルテ選定", "レセコン選定"],
+            "ETL": ["電子カルテーセレコン連携", ""],
             "機械学習プロジェクト": ["ランダムフォレストによる従業員離職予測（Hugging Faceで公開）", "最適人材推薦モデル（RandomForestClassifier/Regressor）"],
             "ITチームの立ち上げ": ["BIツールの選定", "クラウドインフラの選定（ETL/Troccoを含む）", "GitHubの設定（Secrets, Actions）"],
             "一般業務": ["RPA/スクレイピング対応（気象データ、新入社員の交通費、全国法人データ、求人票データ）", "Tableau Server/GCPの運用"]
